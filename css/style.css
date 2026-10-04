@@ -33,7 +33,6 @@ body {
     /* queda ENCIMA de todo el contenido de la página */
     backdrop-filter: blur(8px);
     /* difumina lo de atrás: efecto vidrio */
-
 }
 
 .contenedor {
@@ -41,7 +40,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .marca {
@@ -92,18 +91,17 @@ body {
 .menu-enlaces {
     padding: 0;
     list-style: none;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 .menu-enlaces a {
     display: inline-block;
     text-decoration: none;
     color: white;
-    padding: 10px 0;
+    padding: 10px;
 }
 
-.menu-enlaces a:hover,
-.menu-enlaces a:active {
+.menu-enlaces a:hover{
     color: #f2b705;
 }
 
@@ -113,6 +111,7 @@ body {
     display: inline-block;
     background-color: #f2b705;
     color: #062e1e;
+    font-weight: 600;
     padding: 8px 22px;
     border-radius: 30px;
     text-decoration: none;
@@ -126,6 +125,7 @@ body {
 
 /* Portada */
 .portada {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 100px 20px;
@@ -134,8 +134,7 @@ body {
     background-size: cover;
     background-position: center;
 }
-
-.portada-contenido {
+.portada-titulo{
     color: #f2b705;
     font-size: 13px;
     font-weight: 600;
@@ -150,6 +149,7 @@ body {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .portada-texto {
@@ -178,6 +178,15 @@ body {
 }
 
 .uno:hover {
+    background-color: white;
+    color: #062e1e;
+}
+
+.dos{
+    border-color: white;
+    color: white;
+}
+.dos:hover{
     background-color: white;
     color: #062e1e;
 }
@@ -238,7 +247,7 @@ body {
 
 .programa {
     background-color: white;
-    padding: 60px;
+    padding: 60px 16px;
 }
 
 .programa h2 {
@@ -248,28 +257,77 @@ body {
     margin-bottom: 30px;
 }
 
+.programa-intro{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.programa-etiqueta{
+    color: #b08500;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.programa-intro p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1f2a24;
+    margin-bottom: 0;             /* las dos partes del texto quedan seguidas */
+}
+
+.boton-leer {
+    background-color: rgb(160, 225, 180) ;
+    color: black;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+
+/* Abierto se esconde "Leer más" */
+.boton-leer .leer-mas {
+    display: none;
+}
+
+/* Cerrado se muestra "Leer más" */
+.boton-leer.collapsed .leer-mas {
+    display: inline;
+}
+
+/* se esconde "Leer menos" */
+.boton-leer.collapsed .leer-menos {
+    display: none;
+}
+
+
+.programa-galeria {
+    border-radius: 14px;
+    overflow: hidden;             /* las fotos respetan las esquinas redondeadas */
+    margin-bottom: 24px;
+}
+
 .programa-imagen {
+    display: block;
     width: 100%;
     height: 220px;
-    object-fit: cover;
-    border-radius: 14px;
-    margin-bottom: 24px;
+    object-fit: cover;            /* todas del mismo alto, sin deformarse */
 }
 
 .pestanas {
     display: flex;
-    flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 15px;
 }
 
 .pestanas button {
-    flex: 1 1 40%;
+    flex: 1;
     background-color: white;
     border: 2px solid #062e1e;
     color: #0b5e3c;
     font-weight: 600;
-    padding: 10px;
+    padding: 10px 6px;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -303,7 +361,7 @@ body {
 /* Plan de estudio*/
 
 .plan-estudio {
-    padding: 60px;
+    padding: 60px 16px;
 }
 
 .plan-estudio h2 {
@@ -314,6 +372,15 @@ body {
 }
 
 /*css para manipular la tarjeta de cada semestre*/
+
+.plan-intro {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
 
 .tarjeta{
     width: 75%;
@@ -356,14 +423,20 @@ body {
     align-items: center;
     text-align: center;
 }
-
+ 
 /*cara de adelante*/
+
+.tarjeta-frente {
+    background-color: rgb(226, 231, 201);
+    border: 2px solid #062e1e;
+}
+
 
 .numero{
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: #f2b705;
+    background-color: rgb(102, 150, 60);
     color: #062e1e;
     font-size: 26px;
     font-weight: 800;
@@ -380,13 +453,13 @@ body {
 }
 
 .tarjeta-frente p{
-    color: #5f6b64;
-    font-size: 14px;
+    color: black;
+    font-size: 16px;
     margin: 0;
 }
 
 .tarjeta-atras{
-    background-color: #062e1e;
+    background-color: #2f681f;
     transform: rotateY(180deg);
     overflow-y: auto;
 }
@@ -412,11 +485,7 @@ body {
 }
 
 /*docentes*/
-/* ==========================================================
-   DOCENTES (carrusel: un docente a la vez)
-   ========================================================== */
 
-/* La sección completa */
 .docentes {
   background-color: #ffffff;   /* fondo blanco */
   padding: 60px 16px;          /* 60px arriba y abajo, 16px a los lados */
@@ -427,8 +496,15 @@ body {
   text-align: center;
   color: #062e1e;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
 }
+
+.docentes-intro {
+  text-align: center;
+  color: #5f6b64;
+  margin-bottom: 30px;         
+}
+
 
 /* Tarjeta del docente */
 .docente-tarjeta {
@@ -446,9 +522,9 @@ body {
 .docente-tarjeta img {
   width: 120px;
   height: 120px;
-  border-radius: 50%;          /* círculo */
-  object-fit: cover;           /* llena el círculo sin deformarse */
-  border: 4px solid #f2b705;   /* anillo dorado */
+  border-radius: 50%;          
+  object-fit: cover;           
+  border: 4px solid #f2b705;   
   margin-bottom: 14px;
 }
 
@@ -472,18 +548,20 @@ body {
   margin-bottom: 12px;
 }
 
-/* Correo */
-.docente-tarjeta a {
-  display: block;              /* en su propia línea, debajo del cargo */
-  color: #5f6b64;
-  font-size: 14px;
-  text-decoration: none;
-  overflow-wrap: anywhere;     /* si es muy largo, se parte en vez de salirse */
+
+/* Correo del docente */
+.docente-correo {
+    display: block;               /* en su propia línea, debajo de la formación */
+    color: #0b5e3c;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 10px;             /* separado de la formación */
+    overflow-wrap: anywhere;      /* si es muy largo, se parte en vez de salirse */
 }
 
-.docente-tarjeta a:hover {
-  color: #0b5e3c;
-  text-decoration: underline;
+.docente-correo:hover {
+    text-decoration: underline;
 }
 
 /* ==========================================================
