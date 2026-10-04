@@ -1,3 +1,316 @@
-body{
-    background-color: red;
+/* ==========================================================
+   PALETA DE COLORES (para copiar cuando se necesite)
+   Verde selva:  #0b5e3c   (principal)
+   Verde noche:  #062e1e   (fondos oscuros)
+   Dorado:       #f2b705   (botones y detalles)
+   Crema:        #f4f6f1   (fondo general)
+   Texto:        #1f2a24
+   ========================================================== */
+
+html {
+    scroll-behavior: smooth;
+    /* al tocar un enlace, la página se desliza suave */
+    scroll-padding-top: 80px;
+    /* espacio para que el menú fijo no tape los títulos */
 }
+
+body {
+    background-color: #f4f6f1;
+}
+
+/* Barra del menú */
+
+.menu {
+    background-color: rgba(11, 94, 60, 0.92);
+    /* verde selva un poco transparente */
+    position: fixed;
+    /* se queda fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+    /* queda ENCIMA de todo el contenido de la página */
+    backdrop-filter: blur(8px);
+    /* difumina lo de atrás: efecto vidrio */
+
+}
+
+.contenedor {
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    background-color: #ffffff;
+    padding: 3px;
+    border-radius: 8px;
+}
+
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.marca-texto strong {
+    font-size: 19px;
+    color: white;
+}
+
+.marca-texto small {
+    font-size: 11px;
+    color: #f2b705;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.menu-contenido {
+    width: 100%;
+}
+
+.menu-enlaces {
+    padding: 0;
+    list-style: none;
+    margin: 10px 0;
+}
+
+.menu-enlaces a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+}
+
+.menu-enlaces a:hover,
+.menu-enlaces a:active {
+    color: #f2b705;
+}
+
+/*boton de inscripcion*/
+
+.boton-inscripcion {
+    display: inline-block;
+    background-color: #f2b705;
+    color: #062e1e;
+    padding: 8px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.boton-inscripcion:hover {
+    background-color: white;
+    color: #062e1e;
+}
+
+/* Portada */
+.portada {
+    display: flex;
+    align-items: center;
+    padding: 100px 20px;
+
+    background-image: linear-gradient(rgba(6, 46, 30, 0.85), rgba(11, 94, 60, 0.75)), url("../imagenes/portada.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.portada-contenido {
+    color: #f2b705;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.portada h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.portada-texto {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.portada-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.uno {
+    background-color: #f2b705;
+    color: #062e1e;
+}
+
+.uno:hover {
+    background-color: white;
+    color: #062e1e;
+}
+
+/* Datos del programa */
+
+.datos {
+    padding: 25px 16px;
+}
+
+.datos h2 {
+    text-align: center;
+    color: #062e1e;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.datos-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+}
+
+.datos-contenido article {
+    flex: 1 1 40%;
+    background-color: #f4f6f1;
+    border-radius: 14px;
+    border: 2px solid #062e1e;
+    padding: 20px 12px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.datos-contenido article:hover {
+    transform: translateY(-5px);
+}
+
+.datos-contenido i {
+    font-size: 28px;
+    color: #062e1e;
+}
+
+.datos-contenido strong {
+    display: block;
+    font-size: 21px;
+    color: #062e1e;
+    margin: 8px 0 4px;
+}
+
+.datos-contenido p {
+    font-size: 14px;
+    color: #5f6b64;
+    margin: 0;
+}
+
+/* Programa*/
+
+.programa {
+    background-color: white;
+    padding: 60px;
+}
+
+.programa h2 {
+    text-align: center;
+    color: #0b5e3c;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.programa imagen {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 24px;
+}
+
+.pestanas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.pestanas button {
+    flex: 1 1 40%;
+    background-color: white;
+    border: 2px solid #062e1e;
+    color: #0b5e3c;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background color 0.3s;
+}
+
+.pestanas button:hover,
+.pestanas button.active {
+    background-color: #0b5e3c;
+    color: white;
+}
+
+.tab-content {
+    background-color: #f4f6f1;
+    border-left: 4px solid #f2b705;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.tab-pane h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+}
+
+.tab-pane p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Plan de estudio*/
+
+.plan-estudio {
+    padding: 60px;
+}
+
+.plan-estudio h2 {
+    text-align: center;
+    color: #0b5e3c;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/*css para manipular la tarjeta de cada semestre*/
