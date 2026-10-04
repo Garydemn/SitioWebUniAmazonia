@@ -248,7 +248,7 @@ body {
     margin-bottom: 30px;
 }
 
-.programa imagen {
+.programa-imagen {
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -272,7 +272,7 @@ body {
     padding: 10px;
     border-radius: 30px;
     cursor: pointer;
-    transition: background color 0.3s;
+    transition: background-color 0.3s;
 }
 
 .pestanas button:hover,
@@ -314,3 +314,577 @@ body {
 }
 
 /*css para manipular la tarjeta de cada semestre*/
+
+.tarjeta{
+    width: 75%;
+    height: 320px;
+    margin: 0 auto 50px;
+    perspective: 1000px; /*da el efecto 3d al giro*/
+    cursor: pointer; 
+}
+
+.tarjeta:focus{
+    outline: none;
+}
+
+.tarjeta-interior{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;/*la duracion del giro para que no sea instantaneo*/
+    transform-style: preserve-3d; /*se conserva el efecto 3d aun cuando giran*/
+}
+
+.tarjeta:hover .tarjeta-interior, .tarjeta:focus .tarjeta-interior{
+    transform: rotateY(180deg);
+}
+
+/*informacion de las dos caras*/
+
+.tarjeta-frente, .tarjeta-atras{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;  /*cuando la cara se voltea se vuelve invisible*/
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*cara de adelante*/
+
+.numero{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #f2b705;
+    color: #062e1e;
+    font-size: 26px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.tarjeta-frente h3{
+    color: #0b5e3c;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.tarjeta-frente p{
+    color: #5f6b64;
+    font-size: 14px;
+    margin: 0;
+}
+
+.tarjeta-atras{
+    background-color: #062e1e;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+
+
+.tarjeta-atras ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tarjeta-atras li{
+    background-color: white;
+    color: #0b5e3c;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+/*docentes*/
+/* ==========================================================
+   DOCENTES (carrusel: un docente a la vez)
+   ========================================================== */
+
+/* La sección completa */
+.docentes {
+  background-color: #ffffff;   /* fondo blanco */
+  padding: 60px 16px;          /* 60px arriba y abajo, 16px a los lados */
+}
+
+/* Título */
+.docentes h2 {
+  text-align: center;
+  color: #062e1e;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Tarjeta del docente */
+.docente-tarjeta {
+  width: 75%;                  /* más angosta que el carrusel: deja espacio a las flechas */
+  margin: 0 auto 10px;         /* centrada; 10px abajo para que la sombra no se corte */
+  background-color: #f4f6f1;   /* fondo crema */
+  border: 2px solid #0b5e3c;   /* borde verde */
+  border-radius: 14px;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* sombra suave */
+}
+
+/* Foto redonda con anillo dorado */
+.docente-tarjeta img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;          /* círculo */
+  object-fit: cover;           /* llena el círculo sin deformarse */
+  border: 4px solid #f2b705;   /* anillo dorado */
+  margin-bottom: 14px;
+}
+
+/* Nombre */
+.docente-tarjeta h3 {
+  color: #0b5e3c;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Cargo: píldora verde */
+.docente-tarjeta p {
+  display: inline-block;       /* solo mide lo que mide el texto */
+  background-color: #0b5e3c;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 30px;
+  margin-bottom: 12px;
+}
+
+/* Correo */
+.docente-tarjeta a {
+  display: block;              /* en su propia línea, debajo del cargo */
+  color: #5f6b64;
+  font-size: 14px;
+  text-decoration: none;
+  overflow-wrap: anywhere;     /* si es muy largo, se parte en vez de salirse */
+}
+
+.docente-tarjeta a:hover {
+  color: #0b5e3c;
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   DOCUMENTOS
+   ========================================================== */
+
+/* La sección completa (fondo crema del body) */
+.documentos {
+  padding: 60px 16px;          /* 60px arriba y abajo, 16px a los lados */
+}
+
+/* Título */
+.documentos h2 {
+  text-align: center;
+  color: #062e1e;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Caja que organiza las tarjetas */
+.documentos-lista {
+  display: flex;               /* tarjetas en fila */
+  flex-wrap: wrap;             /* las que no caben bajan */
+  gap: 16px;                   /* espacio entre tarjetas */
+}
+
+/* Cada tarjeta */
+.documentos-lista article {
+  flex: 1 1 100%;              /* en celular: una por fila */
+  background-color: #ffffff;   /* fondo blanco */
+  border: 2px solid #0b5e3c;   /* borde verde */
+  border-radius: 14px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: transform 0.3s;  /* movimiento suave */
+}
+
+/* Al pasar el mouse: la tarjeta sube */
+.documentos-lista article:hover {
+  transform: translateY(-5px);
+}
+
+/* Icono dentro de un círculo dorado */
+.documentos-lista i {
+  display: inline-flex;        /* flexbox en línea: permite centrar el icono dentro del círculo */
+  justify-content: center;     /* centrado horizontal */
+  align-items: center;         /* centrado vertical */
+  width: 56px;                 /* ancho del círculo */
+  height: 56px;                /* alto del círculo */
+  border-radius: 50%;          /* círculo */
+  background-color: #f2b705;   /* dorado */
+  color: #062e1e;              /* icono verde noche */
+  font-size: 26px;             /* tamaño del icono */
+  margin-bottom: 14px;
+}
+
+/* Nombre del documento */
+.documentos-lista h3 {
+  color: #0b5e3c;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Descripción */
+.documentos-lista p {
+  color: #5f6b64;              /* gris verdoso */
+  font-size: 14px;
+  line-height: 1.6;            /* líneas separadas: más fácil de leer */
+  margin-bottom: 16px;
+}
+
+/* Botón "Ver documento" */
+.documentos-lista a {
+  display: inline-block;       /* permite padding como un botón */
+  background-color: #0b5e3c;   /* fondo verde */
+  color: #ffffff;              /* letra blanca */
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 30px;         /* forma de píldora */
+  text-decoration: none;       /* sin subrayado */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Botón con el mouse encima: dorado */
+.documentos-lista a:hover {
+  background-color: #f2b705;
+  color: #062e1e;
+}
+
+
+/* ==========================================================
+   NOTICIAS
+   ========================================================== */
+
+/* La sección completa */
+.noticias {
+  background-color: #ffffff;   /* fondo blanco: alterna con documentos */
+  padding: 60px 16px;
+}
+
+/* Título */
+.noticias h2 {
+  text-align: center;
+  color: #062e1e;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* El carrusel completo */
+.carrusel-noticias {
+  border-radius: 14px;         /* esquinas redondeadas */
+  overflow: hidden;            /* recorta las fotos para que respeten las esquinas */
+  background-color: #062e1e;   /* fondo verde noche (se ve si una foto no carga) */
+}
+
+/* Foto de cada noticia (reemplaza a d-block w-100) */
+.noticia-imagen {
+  display: block;              /* quita el pequeño espacio que dejan las imágenes debajo */
+  width: 100%;                 /* ocupa todo el ancho */
+  height: 300px;               /* todas las fotos del mismo alto */
+  object-fit: cover;           /* llenan el espacio sin deformarse */
+}
+
+/* Recuadro verde con el texto, encima de la foto */
+.noticia-texto {
+  position: absolute;          /* se ubica encima de la foto */
+  left: 15%;                   /* 15% desde la izquierda: no choca con la flecha */
+  right: 15%;                  /* 15% desde la derecha: no choca con la flecha */
+  bottom: 40px;                /* 40px desde abajo: deja espacio a las rayitas */
+  background-color: rgba(11, 94, 60, 0.9); /* verde selva casi sólido */
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+/* Título de la noticia */
+.noticia-texto h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* Texto de la noticia */
+.noticia-texto p {
+  color: rgba(255, 255, 255, 0.9); /* blanco al 90% */
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Enlace "Leer mas" */
+.noticia-texto a {
+  color: #f2b705;              /* dorado */
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.noticia-texto a:hover {
+  text-decoration: underline;  /* subrayado al pasar el mouse */
+}
+
+
+/* ==========================================================
+   CONTACTO
+   ========================================================== */
+
+/* La sección completa (fondo crema del body) */
+.contacto {
+  padding: 60px 16px;
+}
+
+/* Título */
+.contacto h2 {
+  text-align: center;
+  color: #062e1e;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Texto de introducción */
+.contacto-intro {
+  text-align: center;
+  color: #5f6b64;
+  margin-bottom: 30px;
+}
+
+/* Caja que agrupa información y formulario */
+.contacto-contenido {
+  display: flex;               /* activa flexbox */
+  flex-direction: column;      /* en celular: uno debajo del otro */
+  gap: 24px;                   /* espacio entre las dos tarjetas */
+}
+
+/* ---------- INFORMACIÓN ---------- */
+
+/* Tarjeta de información */
+.contacto-info {
+  background-color: #ffffff;
+  border: 2px solid #0b5e3c;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.contacto-info h3 {
+  color: #0b5e3c;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Cada dato: icono + texto */
+.contacto-info address p {
+  display: flex;               /* icono y texto lado a lado */
+  align-items: center;         /* centrados verticalmente */
+  gap: 10px;                   /* espacio entre icono y texto */
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+/* Iconos de los datos */
+.contacto-info address i {
+  color: #0b5e3c;              /* verde selva */
+  font-size: 18px;
+}
+
+/* Enlaces de teléfono y correo */
+.contacto-info address a {
+  color: #0b5e3c;
+  text-decoration: none;
+  overflow-wrap: anywhere;     /* el correo largo se parte en vez de salirse */
+}
+
+.contacto-info address a:hover {
+  text-decoration: underline;
+}
+
+/* Mapa */
+.contacto-mapa {
+  width: 100%;                 /* todo el ancho de la tarjeta */
+  height: 250px;               /* alto del mapa */
+  border: 0;                   /* quita el borde gris que traen los iframe */
+  border-radius: 12px;         /* esquinas redondeadas */
+  margin-top: 8px;
+}
+
+/* ---------- FORMULARIO ---------- */
+
+/* Tarjeta del formulario */
+.contacto-formulario {
+  background-color: #ffffff;
+  border: 2px solid #0b5e3c;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;               /* activa flexbox */
+  flex-direction: column;      /* etiqueta, campo, etiqueta, campo... uno debajo del otro */
+}
+
+/* Etiquetas (Nombre, Correo, Mensaje) */
+.contacto-formulario label {
+  font-weight: 600;
+  color: #062e1e;
+  margin-bottom: 6px;
+}
+
+/* Campos de texto */
+.contacto-formulario input,
+.contacto-formulario textarea {
+  width: 100%;                 /* ocupan todo el ancho */
+  padding: 10px 14px;          /* espacio interno para escribir cómodo */
+  border: 1px solid #cfd8d3;   /* borde gris claro */
+  border-radius: 10px;         /* esquinas redondeadas */
+  font-size: 15px;
+  margin-bottom: 16px;         /* espacio antes de la siguiente etiqueta */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Campo seleccionado (cuando estás escribiendo en él) */
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+  outline: none;                                 /* quita el recuadro azul del navegador */
+  border-color: #0b5e3c;                         /* borde verde */
+  box-shadow: 0 0 0 3px rgba(11, 94, 60, 0.15);  /* halo verde suave alrededor */
+}
+
+/* Área del mensaje */
+.contacto-formulario textarea {
+  min-height: 120px;           /* alto mínimo */
+  resize: vertical;            /* el usuario solo puede agrandarla hacia abajo */
+}
+
+/* Botón de enviar */
+.boton-enviar {
+  background-color: #f2b705;  /* dorado */
+  color: #062e1e;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;         /* píldora */
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.boton-enviar:hover {
+  background-color: #0b5e3c;  /* verde al pasar el mouse */
+  color: #ffffff;
+}
+
+/* ==========================================================
+   PIE DE PÁGINA
+   ========================================================== */
+
+/* El pie completo */
+.pie-pagina {
+  background-color: #062e1e;          /* verde noche */
+  color: rgba(255, 255, 255, 0.8);    /* texto blanco al 80% */
+  padding: 50px 16px 20px;            /* 50px arriba, 16px lados, 20px abajo */
+}
+
+/* Caja de las tres columnas */
+.pie-columnas {
+  display: flex;               /* activa flexbox */
+  flex-direction: column;      /* en celular: una columna debajo de otra */
+  gap: 30px;                   /* espacio entre columnas */
+}
+
+/* Títulos de cada columna */
+.pie-columna h3 {
+  color: #f2b705;              /* dorado */
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Textos de la columna 1 */
+.pie-columna p {
+  font-size: 15px;
+  margin: 0 0 4px;             /* solo 4px abajo */
+}
+
+/* Lista de enlaces rápidos */
+.pie-columna ul {
+  list-style: none;            /* sin viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+/* Enlaces rápidos */
+.pie-columna ul a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  line-height: 2;              /* más espacio entre enlaces: fáciles de tocar */
+  transition: color 0.3s;
+}
+
+.pie-columna ul a:hover {
+  color: #f2b705;              /* dorado al pasar el mouse */
+}
+
+/* ---------- REDES SOCIALES ---------- */
+
+/* Cada icono dentro de un círculo */
+.pie-redes a {
+  display: inline-flex;        /* permite centrar el icono dentro del círculo */
+  justify-content: center;     /* centrado horizontal */
+  align-items: center;         /* centrado vertical */
+  width: 42px;                 /* ancho del círculo */
+  height: 42px;                /* alto del círculo */
+  border-radius: 50%;          /* círculo */
+  background-color: rgba(255, 255, 255, 0.1); /* blanco muy transparente */
+  color: #ffffff;              /* icono blanco */
+  font-size: 20px;             /* tamaño del icono */
+  margin-right: 10px;          /* espacio entre círculos */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pie-redes a:hover {
+  background-color: #f2b705;   /* círculo dorado */
+  color: #062e1e;              /* icono verde noche */
+}
+
+/* ---------- DERECHOS ---------- */
+
+.pie-derechos {
+  border-top: 1px solid rgba(255, 255, 255, 0.15); /* línea fina separadora */
+  margin-top: 30px;            /* espacio antes de la línea */
+  padding-top: 20px;           /* espacio entre la línea y el texto */
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+/* Enlace al sitio oficial */
+.pie-derechos a {
+  color: #f2b705;              /* dorado */
+  text-decoration: none;
+}
+
+.pie-derechos a:hover {
+  text-decoration: underline;
+}

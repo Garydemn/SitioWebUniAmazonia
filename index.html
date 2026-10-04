@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
-        <!-- Bootstrap Icons: iconos de redes sociales -->
+    <!-- Bootstrap Icons: iconos de redes sociales -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -16,37 +16,38 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-
     <header>
-       <nav class="menu">
+      <nav class="menu">
         <div class="contenedor">
           <!-- Logo de la universidad y enlaces de navegación -->
-          <a href="#inicio" class = "marca">
+          <a href="#inicio" class="marca">
             <img
               src="imagenes/logoUniamazonia.png"
               alt="Logo Universidad de la Amazonia"
-            class="logo"
-          />
+              class="logo"
+            />
 
-          <!-- Nombre del programa -->
-          <span class="marca-texto">
-            <strong>Ingeniería de Sistemas</strong>
-            <small>universidad de la amazonia</small>
-          </span>
-        </a>
+            <!-- Nombre del programa -->
+            <span class="marca-texto">
+              <strong>Ingeniería de Sistemas</strong>
+              <small>universidad de la amazonia</small>
+            </span>
+          </a>
 
-        <button
-        class="boton-menu"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#menuNavegacion"
-        aria-label="abrir menu de navegacion"
-          >☰</button>
+          <button
+            class="boton-menu"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuNavegacion"
+            aria-label="abrir menu de navegacion"
+          >
+            ☰
+          </button>
 
-        <!-- Enlaces de navegación -->
-         <div class="collapse menu-contenido" id="menuNavegacion">
+          <!-- Enlaces de navegación -->
+          <div class="collapse menu-contenido" id="menuNavegacion">
             <!-- ms-auto: empuja los enlaces hacia la derecha -->
-        <ul class="menu-enlaces">
+            <ul class="menu-enlaces">
               <li><a href="#programa">Programa</a></li>
               <li><a href="#plan-estudios">Plan de estudios</a></li>
               <li><a href="#docentes">Docentes</a></li>
@@ -55,8 +56,13 @@
               <li><a href="#contacto">Contacto</a></li>
             </ul>
 
-        <!-- Botón de inscripción -->
-            <a href="#contacto" class="boton-inscripcion">Inscribete</a>
+            <!-- Botón de inscripción -->
+            <a
+              href="https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/118-inscripciones.html"
+              rel="noopener"
+              class="boton-inscripcion"
+              >Inscribete</a
+            >
           </div>
         </div>
       </nav>
@@ -64,10 +70,10 @@
 
     <main>
       <section id="inicio" class="portada">
-
         <div class="portada-contenido">
-
-          <p class="portada-titulo">universidad de la amazonia-florencia caqueta</p>
+          <p class="portada-titulo">
+            Universidad de la Amazonia · Campus Florencia, Caquetá
+          </p>
 
           <h1>Ingeniería de Sistemas</h1>
 
@@ -108,94 +114,158 @@
             <strong>52384</strong>
             <p>código SNIES</p>
           </article>
-
-          
         </div>
       </section>
 
-      <section class="programa">
+      <section id="programa" class="programa">
         <h2>Programa de Ingeniería de Sistemas</h2>
 
         <div class="programa-contenido">
+          <img
+            src="imagenes/portada.jpg"
+            alt="Estudiantes"
+            class="programa-imagen"
+          />
 
-          <img src="imagenes/portada.pg" alt="Estudiantes" class="programa-imagen">
-        </div>
-        
-        <div class="programa-pestañas"></div>
+          <div class="programa-pestanas">
+            <div class="pestanas" role="tablist">
+              <button
+                class="active"
+                data-bs-toggle="tab"
+                data-bs-target="#proposito"
+              >
+                Proposito
+              </button>
+              <button data-bs-toggle="tab" data-bs-target="#mision">
+                Mision
+              </button>
+              <button data-bs-toggle="tab" data-bs-target="#vision">
+                Vision
+              </button>
+              <button data-bs-toggle="tab" data-bs-target="#perfil">
+                Perfil
+              </button>
+            </div>
 
-        <div class="pestanas" role="tablist">
-          <button class="active" data-bs-toggle="tab" data-bs-target="#proposito">Proposito</button>
-          <button data-bs-toggle="tab" data-bs-target="#mision">Mision</button>
-          <button data-bs-toggle="tab" data-bs-target="#vision">Vision</button>
-          <button data-bs-toggle="tab" data-bs-target="#perfil">Perfil</button>
-        </div>
+            <div class="tab-content">
+              <div class="tab-pane active" id="proposito">
+                <h3>Propósito</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem qui suscipit odio unde obcaecati saepe dolorum minus
+                  nam harum tempore architecto mollitia illo ad, enim commodi
+                  alias! Et, laborum dolor.
+                </p>
+              </div>
 
-        <div class="tab-content">
-          <div class="tab-pane active" id="proposito">
-            <h3>Propósito</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui
-              suscipit odio unde obcaecati saepe dolorum minus nam harum tempore
-              architecto mollitia illo ad, enim commodi alias! Et, laborum dolor.
-          </p>
-        </div>
+              <div class="tab-pane" id="mision">
+                <h3>Misión</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem qui suscipit odio unde obcaecati saepe dolorum minus
+                  nam harum tempore architecto mollitia illo ad, enim commodi
+                  alias! Et, laborum dolor.
+                </p>
+              </div>
 
-        <div class="tab-pane" id="mision">
-          <h3>Misión</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui
-            suscipit odio unde obcaecati saepe dolorum minus nam harum tempore
-            architecto mollitia illo ad, enim commodi alias! Et, laborum dolor.
-          </p>
-        </div>
+              <div class="tab-pane" id="vision">
+                <h3>Visión</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem qui suscipit odio unde obcaecati saepe dolorum minus
+                  nam harum tempore architecto mollitia illo ad, enim commodi
+                  alias! Et, laborum dolor.
+                </p>
+              </div>
 
-        <div class="tab-pane" id="vision">
-          <h3>Visión</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui
-            suscipit odio unde obcaecati saepe dolorum minus nam harum tempore
-            architecto mollitia illo ad, enim commodi alias! Et, laborum dolor.
-          </p>
-        </div>
-
-        <div class="tab-pane" id="perfil">
-          <h3>Perfil de Egresado</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem qui
-            suscipit odio unde obcaecati saepe dolorum minus nam harum tempore
-            architecto mollitia illo ad, enim commodi alias! Et, laborum dolor.
-          </p>
-        </div>
-
-        </div>
-        </div>
+              <div class="tab-pane" id="perfil">
+                <h3>Perfil de Egresado</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem qui suscipit odio unde obcaecati saepe dolorum minus
+                  nam harum tempore architecto mollitia illo ad, enim commodi
+                  alias! Et, laborum dolor.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="plan-estudio">
+      <section id="plan-estudios" class="plan-estudio">
         <h2>Plan de Estudios</h2>
 
         <!-- CARRUSEL: Bootstrap lo hace funcionar con el id y las clases.
              data-bs-theme="dark": flechas y rayitas oscuras para que se vean sobre fondo claro -->
         <div id="carruselPlan" class="carousel slide" data-bs-theme="dark">
-
           <!-- Rayitas de abajo: una por semestre -->
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Semestre 1"></button>
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="1" aria-label="Semestre 2"></button>
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="2" aria-label="Semestre 3"></button>
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="3" aria-label="Semestre 4"></button>
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="4" aria-label="Semestre 5"></button>
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="5" aria-label="Semestre 6"></button>
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="6" aria-label="Semestre 7"></button>
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="7" aria-label="Semestre 8"></button>
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="8" aria-label="Semestre 9"></button>
-            <button type="button" data-bs-target="#carruselPlan" data-bs-slide-to="9" aria-label="Semestre 10"></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Semestre 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="1"
+              aria-label="Semestre 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="2"
+              aria-label="Semestre 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="3"
+              aria-label="Semestre 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="4"
+              aria-label="Semestre 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="5"
+              aria-label="Semestre 6"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="6"
+              aria-label="Semestre 7"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="7"
+              aria-label="Semestre 8"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="8"
+              aria-label="Semestre 9"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselPlan"
+              data-bs-slide-to="9"
+              aria-label="Semestre 10"
+            ></button>
           </div>
 
           <!-- Contenedor de todos los semestres -->
           <div class="carousel-inner">
-
             <!-- SEMESTRE 1 (lleva "active" porque es el que se ve primero) -->
             <div class="carousel-item active">
               <div class="tarjeta" tabindex="0">
@@ -383,116 +453,201 @@
                 </div>
               </div>
             </div>
-
           </div>
 
           <!-- Flecha izquierda -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carruselPlan" data-bs-slide="prev">
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carruselPlan"
+            data-bs-slide="prev"
+          >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Anterior</span>
           </button>
 
           <!-- Flecha derecha -->
-          <button class="carousel-control-next" type="button" data-bs-target="#carruselPlan" data-bs-slide="next">
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carruselPlan"
+            data-bs-slide="next"
+          >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Siguiente</span>
           </button>
         </div>
       </section>
 
-            <section id="docentes">
+      <section id="docentes" class="docente">
         <h2>Docentes y Directivos</h2>
 
-        <!-- Caja que agrupa las tarjetas para ponerlas en fila con el CSS -->
-        <div class="docentes-lista">
+        <!-- CARRUSEL
+             · carousel slide ......... (Bootstrap) convierte la caja en carrusel
+             · carousel-fade .......... (Bootstrap) cambia con fundido en vez de deslizar
+             · data-bs-ride="carousel"  (Bootstrap) avanza solo
+             · data-bs-interval="3000"  (Bootstrap) cada 3000 milisegundos = 3 segundos
+             · data-bs-theme="dark" ... (Bootstrap) flechas oscuras sobre fondo claro -->
+        <
+        <div
+          id="carruselDocentes"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="4000"
+          data-bs-theme="dark"
+        >
+          <div class="carousel-inner">
+            <!-- DOCENTE 1 (active: el primero que se ve) -->
+            <div class="carousel-item active">
+              <article class="docente-tarjeta">
+                <img
+                  src="imagenes/ruth.png"
+                  alt="Foto del director del programa"
+                />
+                <h3>[COMPLETAR: nombre]</h3>
+                <p>Director del programa</p>
+                <a href="mailto:[COMPLETAR: correo]">[COMPLETAR: correo]</a>
+              </article>
+            </div>
 
-          <!-- Director del programa -->
-          <article>
-            <img src="imagenes/docente1.jpg" alt="Foto del director del programa" />
-            <h3>[COMPLETAR: nombre]</h3>
-            <p>Director del programa</p>
-            <a href="mailto:[COMPLETAR: correo]">[COMPLETAR: correo]</a>
-          </article>
+            <!-- DOCENTE 2 -->
+            <div class="carousel-item">
+              <article class="docente-tarjeta">
+                <img src="imagenes/docente2.jpg" alt="Foto de docente" />
+                <h3>[COMPLETAR: nombre]</h3>
+                <p>Docente</p>
+                <a href="mailto:[COMPLETAR: correo]">[COMPLETAR: correo]</a>
+              </article>
+            </div>
 
-          <!-- Docente 2 -->
-          <article>
-            <img src="imagenes/docente2.jpg" alt="Foto de docente" />
-            <h3>[COMPLETAR: nombre]</h3>
-            <p>Docente</p>
-            <a href="mailto:[COMPLETAR: correo]">[COMPLETAR: correo]</a>
-          </article>
+            <!-- DOCENTE 3 -->
+            <div class="carousel-item">
+              <article class="docente-tarjeta">
+                <img src="imagenes/docente3.jpg" alt="Foto de docente" />
+                <h3>[COMPLETAR: nombre]</h3>
+                <p>Docente</p>
+                <a href="mailto:[COMPLETAR: correo]">[COMPLETAR: correo]</a>
+              </article>
+            </div>
+          </div>
+          <!-- cierra carousel-inner -->
 
-          <!-- Docente 3 -->
-          <article>
-            <img src="imagenes/docente3.jpg" alt="Foto de docente" />
-            <h3>[COMPLETAR: nombre]</h3>
-            <p>Docente</p>
-            <a href="mailto:[COMPLETAR: correo]">[COMPLETAR: correo]</a>
-          </article>
+          <!-- Flecha izquierda -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carruselDocentes"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
 
+          <!-- Flecha derecha -->
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carruselDocentes"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
       </section>
-          
-      <section id="documentos">
+
+      <section id="documentos" class="documentos">
         <h2>Documentos De Interés</h2>
 
         <div class="documentos-lista">
-        <article>
-          <h3>Estatuto Estudiantil</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            dicta repellat impedit, suscipit cum maxime nemo. Excepturi dolores
-            perspiciatis officiis tempore incidunt ullam quod quam mollitia
-            quia, saepe ex doloremque!
-          </p>
-          <a href="#" target="_blank" rel="noopener">Ver documento</a>
-        </article>
+          <article>
+            <i class="bi bi-journal-text"></i>
+            <h3>Estatuto Estudiantil</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+              dicta repellat impedit, suscipit cum maxime nemo. Excepturi
+              dolores perspiciatis officiis tempore incidunt ullam quod quam
+              mollitia quia, saepe ex doloremque!
+            </p>
+            <a href="#" target="_blank" rel="noopener">Ver documento</a>
+          </article>
 
-        <article>
-          <h3>Plan de Estudios</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            dicta repellat impedit, suscipit cum maxime nemo. Excepturi dolores
-            perspiciatis officiis tempore incidunt ullam quod quam mollitia
-            quia, saepe ex doloremque!
-          </p>
-          <a href="#" target="_blank" rel="noopener">Ver documento</a>
-        </article>
+          <article>
+            <i class="bi bi-diagram-3"></i>
+            <h3>Plan de Estudios</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+              dicta repellat impedit, suscipit cum maxime nemo. Excepturi
+              dolores perspiciatis officiis tempore incidunt ullam quod quam
+              mollitia quia, saepe ex doloremque!
+            </p>
+            <a href="#" target="_blank" rel="noopener">Ver documento</a>
+          </article>
 
-        <article>
-          <h3>Información de Inscripción</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            dicta repellat impedit, suscipit cum maxime nemo. Excepturi dolores
-            perspiciatis officiis tempore incidunt ullam quod quam mollitia
-            quia, saepe ex doloremque!
-          </p>
-          <a href="#" target="_blank" rel="noopener">Ver documento</a>
-        </article>
-      </div>
+          <article>
+            <i class="bi bi-clipboard-check"></i>
+            <h3>Información de Inscripción</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+              dicta repellat impedit, suscipit cum maxime nemo. Excepturi
+              dolores perspiciatis officiis tempore incidunt ullam quod quam
+              mollitia quia, saepe ex doloremque!
+            </p>
+            <a href="#" target="_blank" rel="noopener">Ver documento</a>
+          </article>
+        </div>
       </section>
 
-           <section id="noticias">
+      <!-- =========================================================
+           NOTICIAS (carrusel con foto y texto encima)
+           ========================================================= -->
+      <section id="noticias" class="noticias">
         <h2>Ultimas Noticias</h2>
 
-        <!-- CARRUSEL DE NOTICIAS
-             data-bs-ride="carousel": avanza solo, sin hacer clic -->
-        <div id="carruselNoticias" class="carousel slide" data-bs-ride="carousel">
-
+        <!-- CARRUSEL
+             · carousel slide ......... (Bootstrap) carrusel que se desliza
+             · carrusel-noticias ...... (nuestra) esquinas redondeadas y fondo
+             · data-bs-ride="carousel"  (Bootstrap) avanza solo -->
+        <div
+          id="carruselNoticias"
+          class="carousel slide carrusel-noticias"
+          data-bs-ride="carousel"
+        >
           <!-- Rayitas de abajo: una por noticia -->
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carruselNoticias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Noticia 1"></button>
-            <button type="button" data-bs-target="#carruselNoticias" data-bs-slide-to="1" aria-label="Noticia 2"></button>
-            <button type="button" data-bs-target="#carruselNoticias" data-bs-slide-to="2" aria-label="Noticia 3"></button>
+            <button
+              type="button"
+              data-bs-target="#carruselNoticias"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Noticia 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselNoticias"
+              data-bs-slide-to="1"
+              aria-label="Noticia 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carruselNoticias"
+              data-bs-slide-to="2"
+              aria-label="Noticia 3"
+            ></button>
           </div>
 
           <div class="carousel-inner">
-
             <!-- NOTICIA 1 (active: la primera que se ve) -->
             <article class="carousel-item active">
-              <img src="imagenes/noticia1.jpg" class="d-block w-100" alt="Actividad académica" />
-              <!-- Recuadro de texto encima de la foto -->
-              <div class="carousel-caption">
+              <!-- noticia-imagen ... (nuestra) tamaño de la foto -->
+              <img
+                src="imagenes/noticia1.jpg"
+                class="noticia-imagen"
+                alt="Actividad académica"
+              />
+              <!-- noticia-texto ... (nuestra) recuadro verde encima de la foto -->
+              <div class="noticia-texto">
                 <h3>Actividad Académica</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <a href="#" target="_blank" rel="noopener">Leer mas</a>
@@ -501,8 +656,12 @@
 
             <!-- NOTICIA 2 -->
             <article class="carousel-item">
-              <img src="imagenes/noticia2.jpg" class="d-block w-100" alt="Proyectos estudiantiles" />
-              <div class="carousel-caption">
+              <img
+                src="imagenes/noticia2.jpg"
+                class="noticia-imagen"
+                alt="Proyectos estudiantiles"
+              />
+              <div class="noticia-texto">
                 <h3>Proyectos estudiantiles</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <a href="#" target="_blank" rel="noopener">Leer mas</a>
@@ -511,110 +670,200 @@
 
             <!-- NOTICIA 3 -->
             <article class="carousel-item">
-              <img src="imagenes/noticia3.jpg" class="d-block w-100" alt="Noticia 3" />
-              <div class="carousel-caption">
+              <img
+                src="imagenes/noticia3.jpg"
+                class="noticia-imagen"
+                alt="Noticia 3"
+              />
+              <div class="noticia-texto">
                 <h3>Noticia 3</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <a href="#" target="_blank" rel="noopener">Leer mas</a>
               </div>
             </article>
-
           </div>
+          <!-- cierra carousel-inner -->
 
           <!-- Flecha izquierda -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carruselNoticias" data-bs-slide="prev">
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carruselNoticias"
+            data-bs-slide="prev"
+          >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Anterior</span>
           </button>
 
           <!-- Flecha derecha -->
-          <button class="carousel-control-next" type="button" data-bs-target="#carruselNoticias" data-bs-slide="next">
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carruselNoticias"
+            data-bs-slide="next"
+          >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Siguiente</span>
           </button>
         </div>
       </section>
 
-      <section id="contacto">
+      <!-- =========================================================
+           CONTACTO
+           ========================================================= -->
+      <section id="contacto" class="contacto">
         <h2>Contacto</h2>
-        <p>¿Tienes alguna pregunta? ¡Contáctanos!</p>
+        <!-- contacto-intro ... (nuestra) estilo del texto de introducción -->
+        <p class="contacto-intro">¿Tienes alguna pregunta? ¡Contáctanos!</p>
 
+        <!-- Caja que agrupa la información y el formulario -->
         <div class="contacto-contenido">
-
+          <!-- ===== INFORMACIÓN DE CONTACTO ===== -->
           <div class="contacto-info">
             <h3>Información de Contacto</h3>
+
+            <!-- address: etiqueta semántica para datos de contacto -->
             <address>
-              <p>Universidad de la Amazonia - ingeniería de Sistemas</p>
-              <p>Direccion: Porvenir - Florencia - Caquetá</p>
-              <p>Teléfono: <a href="tel: 3133165"></a>(57) 5 1234567</p>
-              <p>Correo Electrónico: <a href="mailto:info@uniamazonia.edu.co">info@uniamazonia.edu.co</a></p>
+              <p>
+                <i class="bi bi-mortarboard"></i> Universidad de la Amazonia -
+                ingeniería de Sistemas
+              </p>
+              <p>
+                <i class="bi bi-geo-alt"></i> Direccion: Porvenir - Florencia -
+                Caquetá
+              </p>
+              <!-- tel: el número SIN espacios. El texto entre <a> y </a> es lo que se ve -->
+              <p>
+                <i class="bi bi-telephone"></i>
+                <a href="tel:+5751234567">(57) 5 1234567</a>
+              </p>
+              <p>
+                <i class="bi bi-envelope"></i>
+                <a href="mailto:info@uniamazonia.edu.co"
+                  >info@uniamazonia.edu.co</a
+                >
+              </p>
             </address>
 
-            <iframe src="https://maps.google.com/maps?q=Universidad%20de%20la%20Amazonia%20Florencia&output=embed"
-            title="Mapa de la Universidad de la Amazonia" 
-            loading="lazy">
-          </iframe>
+            <!-- Mapa de Google
+                 · contacto-mapa ... (nuestra) tamaño y esquinas redondeadas -->
+            <iframe
+              src="https://maps.google.com/maps?q=Universidad%20de%20la%20Amazonia%20Florencia&output=embed"
+              title="Mapa de la Universidad de la Amazonia"
+              loading="lazy"
+              class="contacto-mapa"
+            ></iframe>
           </div>
 
-        <form action="https://formsumit.co/wiligbgaray@gmail.com" method="POST" >
+          <!-- ===== FORMULARIO =====
+               · action ... FormSubmit reenvía el mensaje a ese correo
+               · contacto-formulario ... (nuestra) estilo del formulario -->
+          <form
+            action="https://formsubmit.co/wiligbgaray@gmail.com"
+            method="POST"
+            class="contacto-formulario"
+          >
+            <!-- Campo invisible: asunto del correo que te llega -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo mensaje desde la pagina de contacto del sitio web"
+            />
 
-          <input type="hidden" name="_subject" value="Nuevo mensaje desde la pagina de contacto del sitio web" />
+            <label for="nombre">Nombre:</label>
+            <!-- placeholder: texto gris de ejemplo que desaparece al escribir -->
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
 
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
+            <label for="email">Correo Electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tucorreo@ejemplo.com"
+              required
+            />
 
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required />
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              placeholder="Escribe tu pregunta"
+              required
+            ></textarea>
 
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" required></textarea>
-
-          <button type="submit">Enviar Mensaje</button>
-        </form>
+            <!-- boton-enviar ... (nuestra) botón dorado -->
+            <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+          </form>
         </div>
+        <!-- cierra contacto-contenido -->
       </section>
-
-      
+      <!-- cierra contacto -->
       <!--hero section-->
     </main>
 
-         <footer class="pie-pagina">
-
-      <!-- Caja que agrupa las tres columnas (lado a lado con el CSS) -->
+    <!-- =========================================================
+         PIE DE PÁGINA
+         ========================================================= -->
+    <footer class="pie-pagina">
+      <!-- Caja que agrupa las tres columnas -->
       <div class="pie-columnas">
-
         <!-- Columna 1: universidad -->
-        <div>
+        <div class="pie-columna">
           <h3>Universidad de la Amazonia</h3>
-          <p>Programa de Ingeniería de Sistemas</p>x
+          <p>Programa de Ingeniería de Sistemas</p>
           <p>Florencia, Caquetá, Colombia</p>
         </div>
 
         <!-- Columna 2: enlaces rápidos -->
-        <div>
+        <div class="pie-columna">
           <h3>Enlaces rápidos</h3>
           <ul>
             <li><a href="#programa">Programa</a></li>
             <li><a href="#plan-estudios">Plan de estudios</a></li>
+            <li><a href="#docentes">Docentes</a></li>
             <li><a href="#documentos">Documentos</a></li>
+            <li><a href="#noticias">Noticias</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
 
-        <!-- Columna 3: redes sociales -->
-        <div>
+        <!-- Columna 3: redes sociales
+             · pie-redes ... (nuestra) iconos en círculos -->
+        <div class="pie-columna pie-redes">
           <h3>Síguenos</h3>
-          <a href="[COMPLETAR: enlace de Facebook]" target="_blank" rel="noopener" aria-label="Facebook">
+          <a
+            href="[COMPLETAR: enlace de Facebook]"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+          >
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="[COMPLETAR: enlace de Instagram]" target="_blank" rel="noopener" aria-label="Instagram">
+          <a
+            href="[COMPLETAR: enlace de Instagram]"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
             <i class="bi bi-instagram"></i>
           </a>
-          <a href="[COMPLETAR: enlace de YouTube]" target="_blank" rel="noopener" aria-label="YouTube">
+          <a
+            href="[COMPLETAR: enlace de YouTube]"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube"
+          >
             <i class="bi bi-youtube"></i>
           </a>
         </div>
       </div>
+      <!-- cierra pie-columnas -->
 
       <!-- Línea final: derechos y enlace a la página oficial -->
       <p class="pie-derechos">
@@ -623,10 +872,11 @@
           href="https://www.uniamazonia.edu.co/inicio/index.php/es/programas/pregrado/ingenieria/ingenieria-de-sistemas.html"
           target="_blank"
           rel="noopener"
-        >sitio oficial de la Universidad de la Amazonia</a>.
+          >sitio oficial de la Universidad de la Amazonia</a
+        >.
       </p>
-    </footer> 
-        <!-- Bootstrap: funcionamiento de las pestañas -->
+    </footer>
+    <!-- Bootstrap: funcionamiento de las pestañas -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
