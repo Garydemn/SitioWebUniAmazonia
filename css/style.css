@@ -833,20 +833,14 @@ body {
   text-decoration: underline;
 }
 
-/* Mapa */
 .contacto-mapa {
   width: 100%;
-  /* todo el ancho de la tarjeta */
   height: 250px;
-  /* alto del mapa */
   border: 0;
-  /* quita el borde gris que traen los iframe */
   border-radius: 12px;
-  /* esquinas redondeadas */
   margin-top: 8px;
 }
 
-/* ---------- FORMULARIO ---------- */
 
 /* Tarjeta del formulario */
 .contacto-formulario {
@@ -855,12 +849,10 @@ body {
   border-radius: 14px;
   padding: 20px;
   display: flex;
-  /* activa flexbox */
   flex-direction: column;
-  /* etiqueta, campo, etiqueta, campo... uno debajo del otro */
 }
 
-/* Etiquetas (Nombre, Correo, Mensaje) */
+/* Etiquetas*/
 .contacto-formulario label {
   font-weight: 600;
   color: #062e1e;
@@ -871,47 +863,33 @@ body {
 .contacto-formulario input,
 .contacto-formulario textarea {
   width: 100%;
-  /* ocupan todo el ancho */
   padding: 10px 14px;
-  /* espacio interno para escribir cómodo */
   border: 1px solid #cfd8d3;
-  /* borde gris claro */
   border-radius: 10px;
-  /* esquinas redondeadas */
   font-size: 15px;
   margin-bottom: 16px;
-  /* espacio antes de la siguiente etiqueta */
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s;
 }
 
-/* Campo seleccionado (cuando estás escribiendo en él) */
 .contacto-formulario input:focus,
 .contacto-formulario textarea:focus {
   outline: none;
-  /* quita el recuadro azul del navegador */
   border-color: #0b5e3c;
-  /* borde verde */
   box-shadow: 0 0 0 3px rgba(11, 94, 60, 0.15);
-  /* halo verde suave alrededor */
 }
 
 /* Área del mensaje */
 .contacto-formulario textarea {
   min-height: 120px;
-  /* alto mínimo */
   resize: vertical;
-  /* el usuario solo puede agrandarla hacia abajo */
 }
 
-/* Botón de enviar */
 .boton-enviar {
   background-color: #f2b705;
-  /* dorado */
   color: #062e1e;
   font-weight: 600;
   border: none;
   border-radius: 30px;
-  /* píldora */
   padding: 12px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -919,116 +897,79 @@ body {
 
 .boton-enviar:hover {
   background-color: #0b5e3c;
-  /* verde al pasar el mouse */
   color: #ffffff;
 }
 
-/* ==========================================================
-   PIE DE PÁGINA
-   ========================================================== */
-
-/* El pie completo */
+/*PIE DE PÁGINA*/
 .pie-pagina {
   background-color: #062e1e;
-  /* verde noche */
   color: rgba(255, 255, 255, 0.8);
-  /* texto blanco al 80% */
   padding: 50px 16px 20px;
-  /* 50px arriba, 16px lados, 20px abajo */
 }
 
-/* Caja de las tres columnas */
 .pie-columnas {
   display: flex;
-  /* activa flexbox */
   flex-direction: column;
-  /* en celular: una columna debajo de otra */
   gap: 30px;
-  /* espacio entre columnas */
 }
 
 /* Títulos de cada columna */
 .pie-columna h3 {
   color: #f2b705;
-  /* dorado */
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-/* Textos de la columna 1 */
 .pie-columna p {
   font-size: 15px;
   margin: 0 0 4px;
-  /* solo 4px abajo */
 }
 
 /* Lista de enlaces rápidos */
 .pie-columna ul {
   list-style: none;
-  /* sin viñetas */
   padding: 0;
   margin: 0;
 }
 
-/* Enlaces rápidos */
 .pie-columna ul a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   line-height: 2;
-  /* más espacio entre enlaces: fáciles de tocar */
   transition: color 0.3s;
 }
 
 .pie-columna ul a:hover {
   color: #f2b705;
-  /* dorado al pasar el mouse */
 }
 
-/* ---------- REDES SOCIALES ---------- */
 
-/* Cada icono dentro de un círculo */
 .pie-redes a {
   display: inline-flex;
-  /* permite centrar el icono dentro del círculo */
   justify-content: center;
-  /* centrado horizontal */
   align-items: center;
-  /* centrado vertical */
   width: 42px;
-  /* ancho del círculo */
   height: 42px;
-  /* alto del círculo */
   border-radius: 50%;
-  /* círculo */
   background-color: rgba(255, 255, 255, 0.1);
-  /* blanco muy transparente */
-  color: #ffffff;
-  /* icono blanco */
+  color: white;
   font-size: 20px;
-  /* tamaño del icono */
   margin-right: 10px;
-  /* espacio entre círculos */
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .pie-redes a:hover {
   background-color: #f2b705;
-  /* círculo dorado */
   color: #062e1e;
-  /* icono verde noche */
 }
 
-/* ---------- DERECHOS ---------- */
 
 .pie-derechos {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  /* línea fina separadora */
   margin-top: 30px;
-  /* espacio antes de la línea */
   padding-top: 20px;
-  /* espacio entre la línea y el texto */
   text-align: center;
   font-size: 13px;
   margin-bottom: 0;
@@ -1037,7 +978,6 @@ body {
 /* Enlace al sitio oficial */
 .pie-derechos a {
   color: #f2b705;
-  /* dorado */
   text-decoration: none;
 }
 
@@ -1045,13 +985,8 @@ body {
   text-decoration: underline;
 }
 
-/* ==========================================================
-   MEDIA QUERY 1: TABLET (pantallas de 768px o más)
-   Solo se escribe lo que CAMBIA respecto a la versión celular
-   ========================================================== */
 @media (min-width: 768px) {
 
-  /* ---------- MÁRGENES DE TODAS LAS SECCIONES ---------- */
   .datos,
   .programa,
   .plan-estudio,
@@ -1061,11 +996,9 @@ body {
   .contacto,
   .pie-pagina {
     padding-left: 32px;
-    /* más espacio a los lados */
     padding-right: 32px;
   }
 
-  /* ---------- PORTADA ---------- */
   .portada {
     padding-left: 32px;
     padding-right: 32px;
@@ -1073,114 +1006,84 @@ body {
 
   .portada-contenido {
     max-width: 640px;
-    /* el texto no se estira de borde a borde */
   }
 
   .portada h1 {
     font-size: 52px;
-    /* título más grande */
   }
 
   .portada-texto {
     font-size: 19px;
   }
 
-  /* ---------- DATOS: 4 tarjetas en una fila ---------- */
   .datos-contenido article {
     flex: 1 1 20%;
-    /* 4 tarjetas de ~25% caben en una fila */
   }
 
-  /* ---------- PROGRAMA ---------- */
   .programa-imagen {
     height: 320px;
-    /* foto más alta */
   }
 
-  /* ---------- PLAN DE ESTUDIOS ---------- */
   .tarjeta {
     max-width: 420px;
-    /* no se estira demasiado */
     height: 340px;
-    /* un poco más alta: caben más asignaturas */
   }
 
-  /* ---------- DOCENTES ---------- */
   .docente-tarjeta {
     max-width: 420px;
-    /* tarjeta centrada, no estirada */
   }
 
-  /* ---------- DOCUMENTOS: 3 por fila ---------- */
   .documentos-lista article {
     flex: 1 1 30%;
-    /* 3 tarjetas de ~33% caben en una fila */
   }
 
-  /* ---------- NOTICIAS ---------- */
   .noticia-imagen {
     height: 380px;
-    /* afiche más grande */
   }
 
-  /* ---------- CONTACTO: información y formulario lado a lado ---------- */
   .contacto-contenido {
     flex-direction: row;
-    /* CAMBIO: de columna a fila */
     align-items: flex-start;
-    /* las dos tarjetas empiezan arriba */
   }
 
   .contacto-info,
   .contacto-formulario {
     flex: 1;
-    /* las dos tarjetas miden lo mismo */
   }
 
-  /* ---------- PIE DE PÁGINA: 3 columnas lado a lado ---------- */
   .pie-columnas {
     flex-direction: row;
-    /* CAMBIO: de columna a fila */
     justify-content: space-between;
   }
 
   .pie-columna {
     flex: 1;
-    /* las 3 columnas miden lo mismo */
   }
 }
 
-/* ==========================================================
-   MEDIA QUERY 2: COMPUTADOR (pantallas de 992px o más)
-   Se suma a la de tablet: solo se escribe lo que CAMBIA
-   ========================================================== */
 @media (min-width: 992px) {
 
-  /* ---------- MENÚ COMPLETO ---------- */
 
-  /* Logo a la izquierda y menú a la derecha, en una sola fila */
   .contenedor {
-    max-width: 1140px;           /* no se estira en pantallas muy anchas */
-    margin: 0 auto;              /* centrado */
+    max-width: 1140px;
+    margin: 0 auto;
     padding: 0 32px;
-    flex-wrap: nowrap;           /* todo en una sola fila */
+    flex-wrap: nowrap;
   }
 
-  /* El botón ☰ ya no hace falta */
+
   .boton-menu {
     display: none;
   }
 
-  /* El menú siempre visible, en fila
-     Se usa el id porque la clase "collapse" de Bootstrap lo esconde,
-     y un id tiene más fuerza que una clase */
+
   #menuNavegacion {
     display: flex;
     align-items: center;
-    width: auto;                 /* ya no ocupa todo el ancho: solo lo que necesita */
+    width: auto;
   }
 
-  /* Enlaces uno al lado del otro */
+
   .menu-enlaces {
     display: flex;
     margin: 0;
@@ -1192,15 +1095,10 @@ body {
     font-size: 15px;
   }
 
-  /* Botón de inscripción separado de los enlaces */
   .boton-inscripcion {
     margin-left: 12px;
   }
 
-  /* ---------- CONTENIDO CENTRADO CON ANCHO MÁXIMO ---------- */
-
-  /* Lo de adentro de cada sección no pasa de 1100px y queda centrado.
-     El fondo de la sección sí sigue ocupando todo el ancho. */
   .portada-contenido,
   .datos-contenido,
   .programa-intro,
@@ -1217,7 +1115,6 @@ body {
     margin-right: auto;
   }
 
-  /* ---------- TÍTULOS DE SECCIÓN MÁS GRANDES ---------- */
   .datos h2,
   .programa h2,
   .plan-estudio h2,
@@ -1228,13 +1125,12 @@ body {
     font-size: 36px;
   }
 
-  /* ---------- PORTADA ---------- */
   .portada {
-    justify-content: center;     /* la caja de contenido se centra */
+    justify-content: center;
   }
 
   .portada-contenido {
-    width: 100%;                 /* ocupa hasta 1100px; el texto queda a la izquierda */
+    width: 100%;
   }
 
   .portada h1 {
@@ -1242,42 +1138,39 @@ body {
   }
 
   .portada-texto {
-    max-width: 600px;            /* la frase no se estira demasiado */
+    max-width: 600px;
   }
 
-  /* ---------- PROGRAMA: galería y pestañas lado a lado ---------- */
   .programa-intro {
-    max-width: 800px;            /* el texto del propósito se lee mejor más angosto */
+    max-width: 800px;
   }
 
   .programa-contenido {
-    display: flex;               /* CAMBIO: galería y pestañas en fila */
-    align-items: center;         /* centradas verticalmente */
+    display: flex;
+    align-items: center;
     gap: 32px;
   }
 
   .programa-galeria {
-    flex: 1;                     /* mitad del ancho */
-    margin-bottom: 0;            /* ya no hace falta espacio debajo */
+    flex: 1;
+    margin-bottom: 0;
   }
 
   .programa-pestanas {
-    flex: 1;                     /* la otra mitad */
+    flex: 1;
   }
 
   .programa-imagen {
     height: 380px;
   }
 
-  /* ---------- PLAN DE ESTUDIOS ---------- */
   .tarjeta {
     max-width: 480px;
     height: 360px;
   }
 
-  /* ---------- NOTICIAS ---------- */
   .carrusel-noticias {
-    max-width: 900px;            /* carrusel más angosto que el resto: se ve mejor centrado */
+    max-width: 900px;
   }
 
   .noticia-imagen {
