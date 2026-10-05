@@ -1,49 +1,47 @@
-/* ==========================================================
-   PALETA DE COLORES (para copiar cuando se necesite)
-   Verde selva:  #0b5e3c   (principal)
-   Verde noche:  #062e1e   (fondos oscuros)
-   Dorado:       #f2b705   (botones y detalles)
-   Crema:        #f4f6f1   (fondo general)
-   Texto:        #1f2a24
-   ========================================================== */
-
 html {
   scroll-behavior: smooth;
-  /* al tocar un enlace, la página se desliza suave */
   scroll-padding-top: 80px;
-  /* espacio para que el menú fijo no tape los títulos */
 }
 
 body {
+  width: 100%;
   background-color: #f4f6f1;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
 
-/* Barra del menú */
+header {
+  grid-area: header;
+}
 
+/* Barra fija del menú */
 .menu {
   background-color: rgba(11, 94, 60, 0.92);
-  /* verde selva un poco transparente */
   position: fixed;
-  /* se queda fija en la parte superior */
   top: 0;
   left: 0;
   width: 100%;
   padding: 10px 0;
   z-index: 1000;
-  /* queda ENCIMA de todo el contenido de la página */
   backdrop-filter: blur(8px);
-  /* difumina lo de atrás: efecto vidrio */
 }
 
 .contenedor {
   padding: 0 16px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "marca boton"
+    "menu  menu";
   align-items: center;
-  justify-content: space-between;
 }
 
 .marca {
+  grid-area: marca;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -53,7 +51,7 @@ body {
 .logo {
   height: 50px;
   width: auto;
-  background-color: #ffffff;
+  background-color: white;
   padding: 3px;
   border-radius: 8px;
 }
@@ -77,6 +75,7 @@ body {
 }
 
 .boton-menu {
+  grid-area: boton;
   background-color: transparent;
   border: none;
   color: white;
@@ -85,6 +84,7 @@ body {
 }
 
 .menu-contenido {
+  grid-area: menu;
   width: 100%;
 }
 
@@ -105,8 +105,6 @@ body {
   color: #f2b705;
 }
 
-/*boton de inscripcion*/
-
 .boton-inscripcion {
   display: inline-block;
   background-color: #f2b705;
@@ -123,13 +121,27 @@ body {
   color: #062e1e;
 }
 
-/* Portada */
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "inicio"
+    "datos"
+    "programa"
+    "plan"
+    "docentes"
+    "documentos"
+    "noticias"
+    "contacto";
+}
+
 .portada {
+  grid-area: inicio;
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 100px 20px;
-
   background-image: linear-gradient(rgba(6, 46, 30, 0.85), rgba(11, 94, 60, 0.75)), url("../imagenes/portada.jpg");
   background-size: cover;
   background-position: center;
@@ -193,9 +205,10 @@ body {
   color: #062e1e;
 }
 
-/* Datos del programa */
 
+/* area datos*/
 .datos {
+  grid-area: datos;
   padding: 25px 16px;
 }
 
@@ -207,14 +220,12 @@ body {
 }
 
 .datos-contenido {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
-
 }
 
 .datos-contenido article {
-  flex: 1 1 40%;
   background-color: #f4f6f1;
   border-radius: 14px;
   border: 2px solid #062e1e;
@@ -245,9 +256,10 @@ body {
   margin: 0;
 }
 
-/* Programa*/
 
+/* Área programa*/
 .programa {
+  grid-area: programa;
   background-color: white;
   padding: 60px 16px;
 }
@@ -278,7 +290,6 @@ body {
   line-height: 1.7;
   color: #1f2a24;
   margin-bottom: 0;
-  /* las dos partes del texto quedan seguidas */
 }
 
 .boton-leer {
@@ -287,30 +298,37 @@ body {
   font-weight: 600;
   margin-top: 10px;
   cursor: pointer;
-
 }
 
-/* Abierto se esconde "Leer más" */
 .boton-leer .leer-mas {
   display: none;
 }
 
-/* Cerrado se muestra "Leer más" */
 .boton-leer.collapsed .leer-mas {
   display: inline;
 }
 
-/* se esconde "Leer menos" */
 .boton-leer.collapsed .leer-menos {
   display: none;
 }
 
+.programa-contenido {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "galeria"
+    "pestanas";
+}
 
 .programa-galeria {
+  grid-area: galeria;
   border-radius: 14px;
   overflow: hidden;
-  /* las fotos respetan las esquinas redondeadas */
   margin-bottom: 24px;
+}
+
+.programa-pestanas {
+  grid-area: pestanas;
 }
 
 .programa-imagen {
@@ -318,7 +336,6 @@ body {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  /* todas del mismo alto, sin deformarse */
 }
 
 .pestanas {
@@ -356,7 +373,6 @@ body {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
-
 }
 
 .tab-pane p {
@@ -364,9 +380,10 @@ body {
   margin: 0;
 }
 
-/* Plan de estudio*/
 
+/*plan de estudios*/
 .plan-estudio {
+  grid-area: plan;
   padding: 60px 16px;
 }
 
@@ -377,8 +394,6 @@ body {
   margin-bottom: 30px;
 }
 
-/*css para manipular la tarjeta de cada semestre*/
-
 .plan-intro {
   text-align: center;
   color: black;
@@ -387,13 +402,11 @@ body {
   margin-bottom: 30px;
 }
 
-
 .tarjeta {
   width: 75%;
   height: 320px;
   margin: 0 auto 50px;
   perspective: 1000px;
-  /*da el efecto 3d al giro*/
   cursor: pointer;
 }
 
@@ -406,17 +419,13 @@ body {
   width: 100%;
   height: 100%;
   transition: transform 0.7s;
-  /*la duracion del giro para que no sea instantaneo*/
   transform-style: preserve-3d;
-  /*se conserva el efecto 3d aun cuando giran*/
 }
 
 .tarjeta:hover .tarjeta-interior,
 .tarjeta:focus .tarjeta-interior {
   transform: rotateY(180deg);
 }
-
-/*informacion de las dos caras*/
 
 .tarjeta-frente,
 .tarjeta-atras {
@@ -426,7 +435,6 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  /*cuando la cara se voltea se vuelve invisible*/
   border-radius: 18px;
   padding: 24px;
   display: flex;
@@ -436,13 +444,10 @@ body {
   text-align: center;
 }
 
-/*cara de adelante*/
-
 .tarjeta-frente {
   background-color: rgb(226, 231, 201);
   border: 2px solid #062e1e;
 }
-
 
 .numero {
   width: 64px;
@@ -476,7 +481,6 @@ body {
   overflow-y: auto;
 }
 
-
 .tarjeta-atras ul {
   list-style: none;
   padding: 0;
@@ -496,14 +500,14 @@ body {
   border-radius: 30px;
 }
 
-/*docentes*/
 
+/* Área docentes*/
 .docentes {
+  grid-area: docentes;
   background-color: white;
   padding: 60px 16px;
 }
 
-/* Título */
 .docentes h2 {
   text-align: center;
   color: #062e1e;
@@ -518,7 +522,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* Tarjeta del docente */
 .docente-tarjeta {
   width: 75%;
   margin: 0 auto 10px;
@@ -530,7 +533,6 @@ body {
   box-shadow: 0 6px 16px rgba(239, 2, 2, 0.08);
 }
 
-/* Foto redonda con anillo dorado */
 .docente-tarjeta img {
   width: 120px;
   height: 120px;
@@ -540,7 +542,6 @@ body {
   margin-bottom: 14px;
 }
 
-/* Nombre */
 .docente-tarjeta h3 {
   color: #0b5e3c;
   font-size: 20px;
@@ -548,10 +549,8 @@ body {
   margin-bottom: 8px;
 }
 
-/* Cargo: píldora verde */
 .docente-tarjeta p {
   display: inline-block;
-  /* solo mide lo que mide el texto */
   background-color: #0b5e3c;
   color: white;
   font-size: 14px;
@@ -561,8 +560,6 @@ body {
   margin-bottom: 12px;
 }
 
-
-/* Correo del docente */
 .docente-correo {
   display: block;
   color: #0b5e3c;
@@ -571,20 +568,19 @@ body {
   text-decoration: none;
   margin-top: 10px;
   overflow-wrap: anywhere;
-  /* si es muy largo, se parte en vez de salirse */
 }
 
 .docente-correo:hover {
   text-decoration: underline;
 }
 
-/*DOCUMENTOS*/
 
+/* Área documentos*/
 .documentos {
+  grid-area: documentos;
   padding: 60px 16px;
 }
 
-/* Título */
 .documentos h2 {
   text-align: center;
   color: #062e1e;
@@ -592,17 +588,14 @@ body {
   margin-bottom: 30px;
 }
 
-/* Caja que organiza las tarjetas */
 .documentos-lista {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-/* Cada tarjeta */
 .documentos-lista article {
-  flex: 1 1 40%;
-  background-color: #ffffff;
+  background-color: white;
   border: 2px solid #0b5e3c;
   border-radius: 14px;
   padding: 20px 12px;
@@ -617,7 +610,6 @@ body {
   transform: translateY(-5px);
 }
 
-/* Icono dentro de un círculo dorado */
 .documento-icono {
   display: inline-flex;
   justify-content: center;
@@ -631,7 +623,6 @@ body {
   margin-bottom: 14px;
 }
 
-/* Nombre del documento */
 .documentos-lista h3 {
   color: #0b5e3c;
   font-size: 17px;
@@ -641,7 +632,6 @@ body {
   flex-grow: 1;
 }
 
-/* Botón "Ver documento" */
 .documentos-lista a {
   display: inline-flex;
   align-items: center;
@@ -656,36 +646,32 @@ body {
   transition: background-color 0.3s;
 }
 
-/* Botón con el mouse encima: dorado */
 .documentos-lista a:hover {
   background-color: #f2b705;
   color: #062e1e;
 }
 
 
-/*NOTICIAS*/
-
+/* noticias */
 .noticias {
+  grid-area: noticias;
   background-color: white;
   padding: 60px 16px;
   text-align: center;
 }
 
-/* Título */
 .noticias h2 {
   color: #062e1e;
   font-weight: 700;
   margin-bottom: 30px;
 }
 
-/* El carrusel completo */
 .carrusel-noticias {
   border-radius: 14px;
   overflow: hidden;
   background-color: #062e1e;
 }
 
-/* Imagen de la noticia*/
 .noticia-imagen {
   display: block;
   width: 100%;
@@ -694,13 +680,11 @@ body {
   background-color: #062e1e;
 }
 
-/* Recuadro del texto*/
 .noticia-texto {
   background-color: #0b5e3c;
   padding: 20px 15% 44px;
 }
 
-/* Fecha: etiqueta dorada */
 .noticia-fecha {
   display: inline-block;
   background-color: #f2b705;
@@ -712,7 +696,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* Título de la noticia */
 .noticia-texto h3 {
   color: white;
   font-size: 17px;
@@ -721,14 +704,12 @@ body {
   margin-bottom: 4px;
 }
 
-/* Texto de la noticia */
 .noticia-texto p {
   color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
   margin-bottom: 8px;
 }
 
-/* Enlace "Leer más" */
 .noticia-texto a {
   color: #f2b705;
   font-weight: 600;
@@ -740,7 +721,6 @@ body {
   text-decoration: underline;
 }
 
-/* Enlace "Ver todas las noticias" */
 .noticias-todas {
   display: inline-flex;
   align-items: center;
@@ -756,13 +736,12 @@ body {
 }
 
 
-/*CONTACTO*/
-
+/*Área contacto */
 .contacto {
+  grid-area: contacto;
   padding: 60px 16px;
 }
 
-/* Título */
 .contacto h2 {
   text-align: center;
   color: #062e1e;
@@ -770,24 +749,24 @@ body {
   margin-bottom: 8px;
 }
 
-/* Texto de introducción */
 .contacto-intro {
   text-align: center;
   color: #5f6b64;
   margin-bottom: 30px;
 }
 
-/* Caja que agrupa información y formulario */
 .contacto-contenido {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "info"
+    "formulario";
   gap: 24px;
 }
 
-
-/* Tarjeta de información */
 .contacto-info {
-  background-color: #ffffff;
+  grid-area: info;
+  background-color: white;
   border: 2px solid #0b5e3c;
   border-radius: 14px;
   padding: 20px;
@@ -800,7 +779,6 @@ body {
   margin-bottom: 16px;
 }
 
-/* Cada dato*/
 .contacto-info address p {
   display: flex;
   align-items: flex-start;
@@ -809,19 +787,16 @@ body {
   margin-bottom: 12px;
 }
 
-/* Iconos de los datos */
 .contacto-info address i {
   color: #0b5e3c;
   font-size: 18px;
   flex-shrink: 0;
 }
 
-/* Enlaces de teléfono y correo */
 .contacto-info address a {
   color: #0b5e3c;
   text-decoration: none;
   overflow-wrap: anywhere;
-  /* el correo largo se parte en vez de salirse */
 }
 
 .contacto-info address a:hover {
@@ -836,10 +811,9 @@ body {
   margin-top: 8px;
 }
 
-
-/* Tarjeta del formulario */
 .contacto-formulario {
-  background-color: #ffffff;
+  grid-area: formulario;
+  background-color: white;
   border: 2px solid #0b5e3c;
   border-radius: 14px;
   padding: 20px;
@@ -847,14 +821,12 @@ body {
   flex-direction: column;
 }
 
-/* Etiquetas*/
 .contacto-formulario label {
   font-weight: 600;
   color: #062e1e;
   margin-bottom: 6px;
 }
 
-/* Campos de texto */
 .contacto-formulario input,
 .contacto-formulario textarea {
   width: 100%;
@@ -873,7 +845,6 @@ body {
   box-shadow: 0 0 0 3px rgba(11, 94, 60, 0.15);
 }
 
-/* Área del mensaje */
 .contacto-formulario textarea {
   min-height: 120px;
   resize: vertical;
@@ -892,23 +863,40 @@ body {
 
 .boton-enviar:hover {
   background-color: #0b5e3c;
-  color: #ffffff;
+  color: white;
 }
 
-/*PIE DE PÁGINA*/
-.pie-pagina {
+
+/* footer */
+footer {
+  grid-area: footer;
   background-color: #062e1e;
   color: rgba(255, 255, 255, 0.8);
   padding: 50px 16px 20px;
 }
 
 .pie-columnas {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "universidad"
+    "enlaces"
+    "redes";
   gap: 30px;
 }
 
-/* Títulos de cada columna */
+.pie-universidad {
+  grid-area: universidad;
+}
+
+.pie-enlaces {
+  grid-area: enlaces;
+}
+
+.pie-redes {
+  grid-area: redes;
+}
+
 .pie-columna h3 {
   color: #f2b705;
   font-size: 18px;
@@ -921,7 +909,6 @@ body {
   margin: 0 0 4px;
 }
 
-/* Lista de enlaces rápidos */
 .pie-columna ul {
   list-style: none;
   padding: 0;
@@ -938,7 +925,6 @@ body {
 .pie-columna ul a:hover {
   color: #f2b705;
 }
-
 
 .pie-redes a {
   display: inline-flex;
@@ -960,7 +946,6 @@ body {
   color: #062e1e;
 }
 
-
 .pie-derechos {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   margin-top: 30px;
@@ -970,7 +955,6 @@ body {
   margin-bottom: 0;
 }
 
-/* Enlace al sitio oficial */
 .pie-derechos a {
   color: #f2b705;
   text-decoration: none;
@@ -982,19 +966,34 @@ body {
 
 @media (min-width: 768px) {
 
-  .datos,
-  .programa,
-  .plan-estudio,
-  .docentes,
-  .documentos,
-  .noticias,
-  .contacto,
-  .pie-pagina {
-    padding-left: 32px;
-    padding-right: 32px;
+  body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
   }
 
+  /* ÁREA main */
+  main {
+    grid-area: main;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "inicio"
+      "datos"
+      "programa"
+      "plan"
+      "docentes"
+      "documentos"
+      "noticias"
+      "contacto";
+  }
+
+  /* Área inicio */
   .portada {
+    grid-area: inicio;
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -1011,12 +1010,33 @@ body {
     font-size: 19px;
   }
 
-  .datos-contenido article {
-    flex: 1 1 20%;
+  /* Área datos */
+  .datos {
+    grid-area: datos;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .datos-contenido {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Área programa */
+  .programa {
+    grid-area: programa;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .programa-imagen {
     height: 320px;
+  }
+
+  /* Área plan */
+  .plan-estudio {
+    grid-area: plan;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .tarjeta {
@@ -1024,60 +1044,100 @@ body {
     height: 340px;
   }
 
+  /* Área docentes */
+  .docentes {
+    grid-area: docentes;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   .docente-tarjeta {
     max-width: 420px;
   }
 
-  .documentos-lista article {
-    flex: 1 1 30%;
+  /* Área documentos */
+  .documentos {
+    grid-area: documentos;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .documentos-lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Área noticias */
+  .noticias {
+    grid-area: noticias;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .noticia-imagen {
     height: 380px;
   }
 
-  .contacto-contenido {
-    flex-direction: row;
-    align-items: flex-start;
+  /* Área: contacto */
+  .contacto {
+    grid-area: contacto;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
-  .contacto-info,
-  .contacto-formulario {
-    flex: 1;
+  .contacto-contenido {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "info formulario";
+    align-items: start;
+  }
+
+  /* ÁREA footer */
+  footer {
+    grid-area: footer;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .pie-columnas {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .pie-columna {
-    flex: 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "universidad enlaces redes";
   }
 }
 
 @media (min-width: 992px) {
 
+  body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  /* ÁREA header */
+  header {
+    grid-area: header;
+  }
 
   .contenedor {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 32px;
-    flex-wrap: nowrap;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "marca menu";
   }
-
 
   .boton-menu {
     display: none;
   }
 
-
   #menuNavegacion {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     width: auto;
   }
-
 
   .menu-enlaces {
     display: flex;
@@ -1094,22 +1154,22 @@ body {
     margin-left: 12px;
   }
 
-  .portada-contenido,
-  .datos-contenido,
-  .programa-intro,
-  .programa-contenido,
-  #carruselPlan,
-  #carruselDocentes,
-  .documentos-lista,
-  .carrusel-noticias,
-  .contacto-contenido,
-  .pie-columnas,
-  .pie-derechos {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
+  /* ÁREA main */
+  main {
+    grid-area: main;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "inicio"
+      "datos"
+      "programa"
+      "plan"
+      "docentes"
+      "documentos"
+      "noticias"
+      "contacto";
   }
 
+  /* Títulos de sección más grandes */
   .datos h2,
   .programa h2,
   .plan-estudio h2,
@@ -1120,12 +1180,17 @@ body {
     font-size: 36px;
   }
 
+  /* Área inicio */
   .portada {
+    grid-area: inicio;
     justify-content: center;
   }
 
   .portada-contenido {
     width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .portada h1 {
@@ -1136,27 +1201,55 @@ body {
     max-width: 600px;
   }
 
+  /* Área datos */
+  .datos {
+    grid-area: datos;
+  }
+
+  .datos-contenido {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Área programa */
+  .programa {
+    grid-area: programa;
+  }
+
   .programa-intro {
     max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .programa-contenido {
-    display: flex;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "galeria pestanas";
     align-items: center;
     gap: 32px;
   }
 
   .programa-galeria {
-    flex: 1;
     margin-bottom: 0;
-  }
-
-  .programa-pestanas {
-    flex: 1;
   }
 
   .programa-imagen {
     height: 380px;
+  }
+
+  /* Área plan */
+  .plan-estudio {
+    grid-area: plan;
+  }
+
+  #carruselPlan {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .tarjeta {
@@ -1164,11 +1257,63 @@ body {
     height: 360px;
   }
 
+  /* Áream docentes */
+  .docentes {
+    grid-area: docentes;
+  }
+
+  #carruselDocentes {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Área documentos */
+  .documentos {
+    grid-area: documentos;
+  }
+
+  .documentos-lista {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Área noticias */
+  .noticias {
+    grid-area: noticias;
+  }
+
   .carrusel-noticias {
     max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .noticia-imagen {
     height: 450px;
+  }
+
+  /* Área contacto */
+  .contacto {
+    grid-area: contacto;
+  }
+
+  .contacto-contenido {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ÁREA footer */
+  footer {
+    grid-area: footer;
+  }
+
+  .pie-columnas,
+  .pie-derechos {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
