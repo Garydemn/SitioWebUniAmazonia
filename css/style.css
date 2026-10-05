@@ -8,487 +8,501 @@
    ========================================================== */
 
 html {
-    scroll-behavior: smooth;
-    /* al tocar un enlace, la página se desliza suave */
-    scroll-padding-top: 80px;
-    /* espacio para que el menú fijo no tape los títulos */
+  scroll-behavior: smooth;
+  /* al tocar un enlace, la página se desliza suave */
+  scroll-padding-top: 80px;
+  /* espacio para que el menú fijo no tape los títulos */
 }
 
 body {
-    background-color: #f4f6f1;
+  background-color: #f4f6f1;
 }
 
 /* Barra del menú */
 
 .menu {
-    background-color: rgba(11, 94, 60, 0.92);
-    /* verde selva un poco transparente */
-    position: fixed;
-    /* se queda fija en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 1000;
-    /* queda ENCIMA de todo el contenido de la página */
-    backdrop-filter: blur(8px);
-    /* difumina lo de atrás: efecto vidrio */
+  background-color: rgba(11, 94, 60, 0.92);
+  /* verde selva un poco transparente */
+  position: fixed;
+  /* se queda fija en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+  /* queda ENCIMA de todo el contenido de la página */
+  backdrop-filter: blur(8px);
+  /* difumina lo de atrás: efecto vidrio */
 }
 
 .contenedor {
-    padding: 0 16px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between; 
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .marca {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
 
 .logo {
-    height: 50px;
-    width: auto;
-    background-color: #ffffff;
-    padding: 3px;
-    border-radius: 8px;
+  height: 50px;
+  width: auto;
+  background-color: #ffffff;
+  padding: 3px;
+  border-radius: 8px;
 }
 
 .marca-texto {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
 .marca-texto strong {
-    font-size: 19px;
-    color: white;
+  font-size: 19px;
+  color: white;
 }
 
 .marca-texto small {
-    font-size: 11px;
-    color: #f2b705;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-size: 11px;
+  color: #f2b705;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .boton-menu {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 .menu-contenido {
-    width: 100%;
+  width: 100%;
 }
 
 .menu-enlaces {
-    padding: 0;
-    list-style: none;
-    margin: 10px;
+  padding: 0;
+  list-style: none;
+  margin: 10px;
 }
 
 .menu-enlaces a {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
 }
 
-.menu-enlaces a:hover{
-    color: #f2b705;
+.menu-enlaces a:hover {
+  color: #f2b705;
 }
 
 /*boton de inscripcion*/
 
 .boton-inscripcion {
-    display: inline-block;
-    background-color: #f2b705;
-    color: #062e1e;
-    font-weight: 600;
-    padding: 8px 22px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  display: inline-block;
+  background-color: #f2b705;
+  color: #062e1e;
+  font-weight: 600;
+  padding: 8px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .boton-inscripcion:hover {
-    background-color: white;
-    color: #062e1e;
+  background-color: white;
+  color: #062e1e;
 }
 
 /* Portada */
 .portada {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 20px;
 
-    background-image: linear-gradient(rgba(6, 46, 30, 0.85), rgba(11, 94, 60, 0.75)), url("../imagenes/portada.jpg");
-    background-size: cover;
-    background-position: center;
+  background-image: linear-gradient(rgba(6, 46, 30, 0.85), rgba(11, 94, 60, 0.75)), url("../imagenes/portada.jpg");
+  background-size: cover;
+  background-position: center;
 }
-.portada-titulo{
-    color: #f2b705;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+
+.portada-titulo {
+  color: #f2b705;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .portada h1 {
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .portada-texto {
-    color: white;
-    font-size: 17px;
-    margin-bottom: 28px;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 28px;
 }
 
 .portada-botones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .boton {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    border: 2px solid transparent;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: 2px solid transparent;
 }
 
 .uno {
-    background-color: #f2b705;
-    color: #062e1e;
+  background-color: #f2b705;
+  color: #062e1e;
 }
 
 .uno:hover {
-    background-color: white;
-    color: #062e1e;
+  background-color: white;
+  color: #062e1e;
 }
 
-.dos{
-    border-color: white;
-    color: white;
+.dos {
+  border-color: white;
+  color: white;
 }
-.dos:hover{
-    background-color: white;
-    color: #062e1e;
+
+.dos:hover {
+  background-color: white;
+  color: #062e1e;
 }
 
 /* Datos del programa */
 
 .datos {
-    padding: 25px 16px;
+  padding: 25px 16px;
 }
 
 .datos h2 {
-    text-align: center;
-    color: #062e1e;
-    font-weight: 700;
-    margin-bottom: 30px;
+  text-align: center;
+  color: #062e1e;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
 .datos-contenido {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 
 }
 
 .datos-contenido article {
-    flex: 1 1 40%;
-    background-color: #f4f6f1;
-    border-radius: 14px;
-    border: 2px solid #062e1e;
-    padding: 20px 12px;
-    text-align: center;
-    transition: transform 0.3s;
+  flex: 1 1 40%;
+  background-color: #f4f6f1;
+  border-radius: 14px;
+  border: 2px solid #062e1e;
+  padding: 20px 12px;
+  text-align: center;
+  transition: transform 0.3s;
 }
 
 .datos-contenido article:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .datos-contenido i {
-    font-size: 28px;
-    color: #062e1e;
+  font-size: 28px;
+  color: #062e1e;
 }
 
 .datos-contenido strong {
-    display: block;
-    font-size: 21px;
-    color: #062e1e;
-    margin: 8px 0 4px;
+  display: block;
+  font-size: 21px;
+  color: #062e1e;
+  margin: 8px 0 4px;
 }
 
 .datos-contenido p {
-    font-size: 14px;
-    color: #5f6b64;
-    margin: 0;
+  font-size: 14px;
+  color: #5f6b64;
+  margin: 0;
 }
 
 /* Programa*/
 
 .programa {
-    background-color: white;
-    padding: 60px 16px;
+  background-color: white;
+  padding: 60px 16px;
 }
 
 .programa h2 {
-    text-align: center;
-    color: #0b5e3c;
-    font-weight: 700;
-    margin-bottom: 30px;
+  text-align: center;
+  color: #0b5e3c;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
-.programa-intro{
-    text-align: center;
-    margin-bottom: 30px;
+.programa-intro {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.programa-etiqueta{
-    color: #b08500;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+.programa-etiqueta {
+  color: #b08500;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
+
 .programa-intro p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #1f2a24;
-    margin-bottom: 0;             /* las dos partes del texto quedan seguidas */
+  font-size: 16px;
+  line-height: 1.7;
+  color: #1f2a24;
+  margin-bottom: 0;
+  /* las dos partes del texto quedan seguidas */
 }
 
 .boton-leer {
-    background-color: rgb(160, 225, 180) ;
-    color: black;
-    font-weight: 600;
-    margin-top: 10px;
-    cursor: pointer;
-    
+  background-color: rgb(160, 225, 180);
+  color: black;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+
 }
 
 /* Abierto se esconde "Leer más" */
 .boton-leer .leer-mas {
-    display: none;
+  display: none;
 }
 
 /* Cerrado se muestra "Leer más" */
 .boton-leer.collapsed .leer-mas {
-    display: inline;
+  display: inline;
 }
 
 /* se esconde "Leer menos" */
 .boton-leer.collapsed .leer-menos {
-    display: none;
+  display: none;
 }
 
 
 .programa-galeria {
-    border-radius: 14px;
-    overflow: hidden;             /* las fotos respetan las esquinas redondeadas */
-    margin-bottom: 24px;
+  border-radius: 14px;
+  overflow: hidden;
+  /* las fotos respetan las esquinas redondeadas */
+  margin-bottom: 24px;
 }
 
 .programa-imagen {
-    display: block;
-    width: 100%;
-    height: 220px;
-    object-fit: cover;            /* todas del mismo alto, sin deformarse */
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  /* todas del mismo alto, sin deformarse */
 }
 
 .pestanas {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 15px;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
 }
 
 .pestanas button {
-    flex: 1;
-    background-color: white;
-    border: 2px solid #062e1e;
-    color: #0b5e3c;
-    font-weight: 600;
-    padding: 10px 6px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  flex: 1;
+  background-color: white;
+  border: 2px solid #062e1e;
+  color: #0b5e3c;
+  font-weight: 600;
+  padding: 10px 6px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .pestanas button:hover,
 .pestanas button.active {
-    background-color: #0b5e3c;
-    color: white;
+  background-color: #0b5e3c;
+  color: white;
 }
 
 .tab-content {
-    background-color: #f4f6f1;
-    border-left: 4px solid #f2b705;
-    border-radius: 14px;
-    padding: 20px;
+  background-color: #f4f6f1;
+  border-left: 4px solid #f2b705;
+  border-radius: 14px;
+  padding: 20px;
 }
 
 .tab-pane h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
 
 }
 
 .tab-pane p {
-    line-height: 1.6;
-    margin: 0;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* Plan de estudio*/
 
 .plan-estudio {
-    padding: 60px 16px;
+  padding: 60px 16px;
 }
 
 .plan-estudio h2 {
-    text-align: center;
-    color: #0b5e3c;
-    font-weight: 700;
-    margin-bottom: 30px;
+  text-align: center;
+  color: #0b5e3c;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 
 /*css para manipular la tarjeta de cada semestre*/
 
 .plan-intro {
-    text-align: center;
-    color: black;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
 
-.tarjeta{
-    width: 75%;
-    height: 320px;
-    margin: 0 auto 50px;
-    perspective: 1000px; /*da el efecto 3d al giro*/
-    cursor: pointer; 
+.tarjeta {
+  width: 75%;
+  height: 320px;
+  margin: 0 auto 50px;
+  perspective: 1000px;
+  /*da el efecto 3d al giro*/
+  cursor: pointer;
 }
 
-.tarjeta:focus{
-    outline: none;
+.tarjeta:focus {
+  outline: none;
 }
 
-.tarjeta-interior{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.7s;/*la duracion del giro para que no sea instantaneo*/
-    transform-style: preserve-3d; /*se conserva el efecto 3d aun cuando giran*/
+.tarjeta-interior {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  /*la duracion del giro para que no sea instantaneo*/
+  transform-style: preserve-3d;
+  /*se conserva el efecto 3d aun cuando giran*/
 }
 
-.tarjeta:hover .tarjeta-interior, .tarjeta:focus .tarjeta-interior{
-    transform: rotateY(180deg);
+.tarjeta:hover .tarjeta-interior,
+.tarjeta:focus .tarjeta-interior {
+  transform: rotateY(180deg);
 }
 
 /*informacion de las dos caras*/
 
-.tarjeta-frente, .tarjeta-atras{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;  /*cuando la cara se voltea se vuelve invisible*/
-    border-radius: 18px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.tarjeta-frente,
+.tarjeta-atras {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /*cuando la cara se voltea se vuelve invisible*/
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
- 
+
 /*cara de adelante*/
 
 .tarjeta-frente {
-    background-color: rgb(226, 231, 201);
-    border: 2px solid #062e1e;
+  background-color: rgb(226, 231, 201);
+  border: 2px solid #062e1e;
 }
 
 
-.numero{
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background-color: rgb(102, 150, 60);
-    color: #062e1e;
-    font-size: 26px;
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 14px;
+.numero {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgb(102, 150, 60);
+  color: #062e1e;
+  font-size: 26px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
 }
 
-.tarjeta-frente h3{
-    color: #0b5e3c;
-    font-size: 26px;
-    font-weight: 700;
+.tarjeta-frente h3 {
+  color: #0b5e3c;
+  font-size: 26px;
+  font-weight: 700;
 }
 
-.tarjeta-frente p{
-    color: black;
-    font-size: 16px;
-    margin: 0;
+.tarjeta-frente p {
+  color: black;
+  font-size: 16px;
+  margin: 0;
 }
 
-.tarjeta-atras{
-    background-color: #2f681f;
-    transform: rotateY(180deg);
-    overflow-y: auto;
+.tarjeta-atras {
+  background-color: #2f681f;
+  transform: rotateY(180deg);
+  overflow-y: auto;
 }
 
 
-.tarjeta-atras ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+.tarjeta-atras ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
 }
 
-.tarjeta-atras li{
-    background-color: white;
-    color: #0b5e3c;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px;
-    border-radius: 30px;
+.tarjeta-atras li {
+  background-color: white;
+  color: #0b5e3c;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 30px;
 }
 
 /*docentes*/
 
 .docentes {
-  background-color: #ffffff;   /* fondo blanco */
-  padding: 60px 16px;          /* 60px arriba y abajo, 16px a los lados */
+  background-color: #ffffff;
+  /* fondo blanco */
+  padding: 60px 16px;
+  /* 60px arriba y abajo, 16px a los lados */
 }
 
 /* Título */
@@ -502,29 +516,32 @@ body {
 .docentes-intro {
   text-align: center;
   color: #5f6b64;
-  margin-bottom: 30px;         
+  font-size: 18px;
+  margin-bottom: 30px;
 }
-
 
 /* Tarjeta del docente */
 .docente-tarjeta {
-  width: 75%;                  /* más angosta que el carrusel: deja espacio a las flechas */
-  margin: 0 auto 10px;         /* centrada; 10px abajo para que la sombra no se corte */
-  background-color: #f4f6f1;   /* fondo crema */
-  border: 2px solid #0b5e3c;   /* borde verde */
+  width: 75%;
+  /* más angosta que el carrusel: deja espacio a las flechas */
+  margin: 0 auto 10px;
+  /* centrada; 10px abajo para que la sombra no se corte */
+  background-color: #fdffe3;
+  border: 2px solid #0b5e3c;
   border-radius: 14px;
   padding: 24px 16px;
   text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); /* sombra suave */
+  box-shadow: 0 6px 16px rgba(239, 2, 2, 0.08);
+  /* sombra suave */
 }
 
 /* Foto redonda con anillo dorado */
 .docente-tarjeta img {
   width: 120px;
   height: 120px;
-  border-radius: 50%;          
-  object-fit: cover;           
-  border: 4px solid #f2b705;   
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #009127;
   margin-bottom: 14px;
 }
 
@@ -538,10 +555,11 @@ body {
 
 /* Cargo: píldora verde */
 .docente-tarjeta p {
-  display: inline-block;       /* solo mide lo que mide el texto */
+  display: inline-block;
+  /* solo mide lo que mide el texto */
   background-color: #0b5e3c;
-  color: #ffffff;
-  font-size: 13px;
+  color: white;
+  font-size: 14px;
   font-weight: 600;
   padding: 4px 14px;
   border-radius: 30px;
@@ -551,26 +569,24 @@ body {
 
 /* Correo del docente */
 .docente-correo {
-    display: block;               /* en su propia línea, debajo de la formación */
-    color: #0b5e3c;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 10px;             /* separado de la formación */
-    overflow-wrap: anywhere;      /* si es muy largo, se parte en vez de salirse */
+  display: block;
+  color: #0b5e3c;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
+  /* si es muy largo, se parte en vez de salirse */
 }
 
 .docente-correo:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* ==========================================================
-   DOCUMENTOS
-   ========================================================== */
+/*DOCUMENTOS*/
 
-/* La sección completa (fondo crema del body) */
 .documentos {
-  padding: 60px 16px;          /* 60px arriba y abajo, 16px a los lados */
+  padding: 60px 16px;
 }
 
 /* Título */
@@ -583,68 +599,66 @@ body {
 
 /* Caja que organiza las tarjetas */
 .documentos-lista {
-  display: flex;               /* tarjetas en fila */
-  flex-wrap: wrap;             /* las que no caben bajan */
-  gap: 16px;                   /* espacio entre tarjetas */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 /* Cada tarjeta */
 .documentos-lista article {
-  flex: 1 1 100%;              /* en celular: una por fila */
-  background-color: #ffffff;   /* fondo blanco */
-  border: 2px solid #0b5e3c;   /* borde verde */
+  flex: 1 1 40%;
+  background-color: #ffffff;
+  border: 2px solid #0b5e3c;
   border-radius: 14px;
-  padding: 24px 20px;
+  padding: 20px 12px;
   text-align: center;
-  transition: transform 0.3s;  /* movimiento suave */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
 }
 
-/* Al pasar el mouse: la tarjeta sube */
 .documentos-lista article:hover {
   transform: translateY(-5px);
 }
 
 /* Icono dentro de un círculo dorado */
-.documentos-lista i {
-  display: inline-flex;        /* flexbox en línea: permite centrar el icono dentro del círculo */
-  justify-content: center;     /* centrado horizontal */
-  align-items: center;         /* centrado vertical */
-  width: 56px;                 /* ancho del círculo */
-  height: 56px;                /* alto del círculo */
-  border-radius: 50%;          /* círculo */
-  background-color: #f2b705;   /* dorado */
-  color: #062e1e;              /* icono verde noche */
-  font-size: 26px;             /* tamaño del icono */
+.documento-icono {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #f2b705;
+  color: #062e1e;
+  font-size: 26px;
   margin-bottom: 14px;
 }
 
 /* Nombre del documento */
 .documentos-lista h3 {
   color: #0b5e3c;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 8px;
-}
-
-/* Descripción */
-.documentos-lista p {
-  color: #5f6b64;              /* gris verdoso */
-  font-size: 14px;
-  line-height: 1.6;            /* líneas separadas: más fácil de leer */
-  margin-bottom: 16px;
+  flex-grow: 1;
 }
 
 /* Botón "Ver documento" */
 .documentos-lista a {
-  display: inline-block;       /* permite padding como un botón */
-  background-color: #0b5e3c;   /* fondo verde */
-  color: #ffffff;              /* letra blanca */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #0b5e3c;
+  color: white;
   font-weight: 600;
   font-size: 14px;
   padding: 8px 20px;
-  border-radius: 30px;         /* forma de píldora */
-  text-decoration: none;       /* sin subrayado */
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 /* Botón con el mouse encima: dorado */
@@ -654,19 +668,16 @@ body {
 }
 
 
-/* ==========================================================
-   NOTICIAS
-   ========================================================== */
+/*NOTICIAS*/
 
-/* La sección completa */
 .noticias {
-  background-color: #ffffff;   /* fondo blanco: alterna con documentos */
+  background-color: white;
   padding: 60px 16px;
+  text-align: center;
 }
 
 /* Título */
 .noticias h2 {
-  text-align: center;
   color: #062e1e;
   font-weight: 700;
   margin-bottom: 30px;
@@ -674,64 +685,84 @@ body {
 
 /* El carrusel completo */
 .carrusel-noticias {
-  border-radius: 14px;         /* esquinas redondeadas */
-  overflow: hidden;            /* recorta las fotos para que respeten las esquinas */
-  background-color: #062e1e;   /* fondo verde noche (se ve si una foto no carga) */
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #062e1e;
 }
 
-/* Foto de cada noticia (reemplaza a d-block w-100) */
+/* Imagen de la noticia*/
 .noticia-imagen {
-  display: block;              /* quita el pequeño espacio que dejan las imágenes debajo */
-  width: 100%;                 /* ocupa todo el ancho */
-  height: 300px;               /* todas las fotos del mismo alto */
-  object-fit: cover;           /* llenan el espacio sin deformarse */
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background-color: #062e1e;
 }
 
-/* Recuadro verde con el texto, encima de la foto */
+/* Recuadro del texto*/
 .noticia-texto {
-  position: absolute;          /* se ubica encima de la foto */
-  left: 15%;                   /* 15% desde la izquierda: no choca con la flecha */
-  right: 15%;                  /* 15% desde la derecha: no choca con la flecha */
-  bottom: 40px;                /* 40px desde abajo: deja espacio a las rayitas */
-  background-color: rgba(11, 94, 60, 0.9); /* verde selva casi sólido */
-  border-radius: 12px;
-  padding: 14px 16px;
-  text-align: center;
+  background-color: #0b5e3c;
+  padding: 20px 15% 44px;
+}
+
+/* Fecha: etiqueta dorada */
+.noticia-fecha {
+  display: inline-block;
+  background-color: #f2b705;
+  color: #062e1e;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 30px;
+  margin-bottom: 6px;
 }
 
 /* Título de la noticia */
 .noticia-texto h3 {
-  color: #ffffff;
-  font-size: 18px;
+  color: white;
+  font-size: 17px;
   font-weight: 700;
+  line-height: 1.3;
   margin-bottom: 4px;
 }
 
 /* Texto de la noticia */
 .noticia-texto p {
-  color: rgba(255, 255, 255, 0.9); /* blanco al 90% */
+  color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
   margin-bottom: 8px;
 }
 
-/* Enlace "Leer mas" */
+/* Enlace "Leer más" */
 .noticia-texto a {
-  color: #f2b705;              /* dorado */
+  color: #f2b705;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
 }
 
 .noticia-texto a:hover {
-  text-decoration: underline;  /* subrayado al pasar el mouse */
+  text-decoration: underline;
+}
+
+/* Enlace "Ver todas las noticias" */
+.noticias-todas {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  color: #0b5e3c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.noticias-todas:hover {
+  text-decoration: underline;
 }
 
 
-/* ==========================================================
-   CONTACTO
-   ========================================================== */
+/*CONTACTO*/
 
-/* La sección completa (fondo crema del body) */
 .contacto {
   padding: 60px 16px;
 }
@@ -753,12 +784,11 @@ body {
 
 /* Caja que agrupa información y formulario */
 .contacto-contenido {
-  display: flex;               /* activa flexbox */
-  flex-direction: column;      /* en celular: uno debajo del otro */
-  gap: 24px;                   /* espacio entre las dos tarjetas */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-/* ---------- INFORMACIÓN ---------- */
 
 /* Tarjeta de información */
 .contacto-info {
@@ -775,26 +805,28 @@ body {
   margin-bottom: 16px;
 }
 
-/* Cada dato: icono + texto */
+/* Cada dato*/
 .contacto-info address p {
-  display: flex;               /* icono y texto lado a lado */
-  align-items: center;         /* centrados verticalmente */
-  gap: 10px;                   /* espacio entre icono y texto */
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   font-size: 15px;
   margin-bottom: 12px;
 }
 
 /* Iconos de los datos */
 .contacto-info address i {
-  color: #0b5e3c;              /* verde selva */
+  color: #0b5e3c;
   font-size: 18px;
+  flex-shrink: 0;
 }
 
 /* Enlaces de teléfono y correo */
 .contacto-info address a {
   color: #0b5e3c;
   text-decoration: none;
-  overflow-wrap: anywhere;     /* el correo largo se parte en vez de salirse */
+  overflow-wrap: anywhere;
+  /* el correo largo se parte en vez de salirse */
 }
 
 .contacto-info address a:hover {
@@ -803,10 +835,14 @@ body {
 
 /* Mapa */
 .contacto-mapa {
-  width: 100%;                 /* todo el ancho de la tarjeta */
-  height: 250px;               /* alto del mapa */
-  border: 0;                   /* quita el borde gris que traen los iframe */
-  border-radius: 12px;         /* esquinas redondeadas */
+  width: 100%;
+  /* todo el ancho de la tarjeta */
+  height: 250px;
+  /* alto del mapa */
+  border: 0;
+  /* quita el borde gris que traen los iframe */
+  border-radius: 12px;
+  /* esquinas redondeadas */
   margin-top: 8px;
 }
 
@@ -818,8 +854,10 @@ body {
   border: 2px solid #0b5e3c;
   border-radius: 14px;
   padding: 20px;
-  display: flex;               /* activa flexbox */
-  flex-direction: column;      /* etiqueta, campo, etiqueta, campo... uno debajo del otro */
+  display: flex;
+  /* activa flexbox */
+  flex-direction: column;
+  /* etiqueta, campo, etiqueta, campo... uno debajo del otro */
 }
 
 /* Etiquetas (Nombre, Correo, Mensaje) */
@@ -832,43 +870,56 @@ body {
 /* Campos de texto */
 .contacto-formulario input,
 .contacto-formulario textarea {
-  width: 100%;                 /* ocupan todo el ancho */
-  padding: 10px 14px;          /* espacio interno para escribir cómodo */
-  border: 1px solid #cfd8d3;   /* borde gris claro */
-  border-radius: 10px;         /* esquinas redondeadas */
+  width: 100%;
+  /* ocupan todo el ancho */
+  padding: 10px 14px;
+  /* espacio interno para escribir cómodo */
+  border: 1px solid #cfd8d3;
+  /* borde gris claro */
+  border-radius: 10px;
+  /* esquinas redondeadas */
   font-size: 15px;
-  margin-bottom: 16px;         /* espacio antes de la siguiente etiqueta */
+  margin-bottom: 16px;
+  /* espacio antes de la siguiente etiqueta */
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 /* Campo seleccionado (cuando estás escribiendo en él) */
 .contacto-formulario input:focus,
 .contacto-formulario textarea:focus {
-  outline: none;                                 /* quita el recuadro azul del navegador */
-  border-color: #0b5e3c;                         /* borde verde */
-  box-shadow: 0 0 0 3px rgba(11, 94, 60, 0.15);  /* halo verde suave alrededor */
+  outline: none;
+  /* quita el recuadro azul del navegador */
+  border-color: #0b5e3c;
+  /* borde verde */
+  box-shadow: 0 0 0 3px rgba(11, 94, 60, 0.15);
+  /* halo verde suave alrededor */
 }
 
 /* Área del mensaje */
 .contacto-formulario textarea {
-  min-height: 120px;           /* alto mínimo */
-  resize: vertical;            /* el usuario solo puede agrandarla hacia abajo */
+  min-height: 120px;
+  /* alto mínimo */
+  resize: vertical;
+  /* el usuario solo puede agrandarla hacia abajo */
 }
 
 /* Botón de enviar */
 .boton-enviar {
-  background-color: #f2b705;  /* dorado */
+  background-color: #f2b705;
+  /* dorado */
   color: #062e1e;
   font-weight: 600;
   border: none;
-  border-radius: 30px;         /* píldora */
+  border-radius: 30px;
+  /* píldora */
   padding: 12px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .boton-enviar:hover {
-  background-color: #0b5e3c;  /* verde al pasar el mouse */
+  background-color: #0b5e3c;
+  /* verde al pasar el mouse */
   color: #ffffff;
 }
 
@@ -878,21 +929,28 @@ body {
 
 /* El pie completo */
 .pie-pagina {
-  background-color: #062e1e;          /* verde noche */
-  color: rgba(255, 255, 255, 0.8);    /* texto blanco al 80% */
-  padding: 50px 16px 20px;            /* 50px arriba, 16px lados, 20px abajo */
+  background-color: #062e1e;
+  /* verde noche */
+  color: rgba(255, 255, 255, 0.8);
+  /* texto blanco al 80% */
+  padding: 50px 16px 20px;
+  /* 50px arriba, 16px lados, 20px abajo */
 }
 
 /* Caja de las tres columnas */
 .pie-columnas {
-  display: flex;               /* activa flexbox */
-  flex-direction: column;      /* en celular: una columna debajo de otra */
-  gap: 30px;                   /* espacio entre columnas */
+  display: flex;
+  /* activa flexbox */
+  flex-direction: column;
+  /* en celular: una columna debajo de otra */
+  gap: 30px;
+  /* espacio entre columnas */
 }
 
 /* Títulos de cada columna */
 .pie-columna h3 {
-  color: #f2b705;              /* dorado */
+  color: #f2b705;
+  /* dorado */
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 12px;
@@ -901,12 +959,14 @@ body {
 /* Textos de la columna 1 */
 .pie-columna p {
   font-size: 15px;
-  margin: 0 0 4px;             /* solo 4px abajo */
+  margin: 0 0 4px;
+  /* solo 4px abajo */
 }
 
 /* Lista de enlaces rápidos */
 .pie-columna ul {
-  list-style: none;            /* sin viñetas */
+  list-style: none;
+  /* sin viñetas */
   padding: 0;
   margin: 0;
 }
@@ -915,43 +975,60 @@ body {
 .pie-columna ul a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  line-height: 2;              /* más espacio entre enlaces: fáciles de tocar */
+  line-height: 2;
+  /* más espacio entre enlaces: fáciles de tocar */
   transition: color 0.3s;
 }
 
 .pie-columna ul a:hover {
-  color: #f2b705;              /* dorado al pasar el mouse */
+  color: #f2b705;
+  /* dorado al pasar el mouse */
 }
 
 /* ---------- REDES SOCIALES ---------- */
 
 /* Cada icono dentro de un círculo */
 .pie-redes a {
-  display: inline-flex;        /* permite centrar el icono dentro del círculo */
-  justify-content: center;     /* centrado horizontal */
-  align-items: center;         /* centrado vertical */
-  width: 42px;                 /* ancho del círculo */
-  height: 42px;                /* alto del círculo */
-  border-radius: 50%;          /* círculo */
-  background-color: rgba(255, 255, 255, 0.1); /* blanco muy transparente */
-  color: #ffffff;              /* icono blanco */
-  font-size: 20px;             /* tamaño del icono */
-  margin-right: 10px;          /* espacio entre círculos */
+  display: inline-flex;
+  /* permite centrar el icono dentro del círculo */
+  justify-content: center;
+  /* centrado horizontal */
+  align-items: center;
+  /* centrado vertical */
+  width: 42px;
+  /* ancho del círculo */
+  height: 42px;
+  /* alto del círculo */
+  border-radius: 50%;
+  /* círculo */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* blanco muy transparente */
+  color: #ffffff;
+  /* icono blanco */
+  font-size: 20px;
+  /* tamaño del icono */
+  margin-right: 10px;
+  /* espacio entre círculos */
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .pie-redes a:hover {
-  background-color: #f2b705;   /* círculo dorado */
-  color: #062e1e;              /* icono verde noche */
+  background-color: #f2b705;
+  /* círculo dorado */
+  color: #062e1e;
+  /* icono verde noche */
 }
 
 /* ---------- DERECHOS ---------- */
 
 .pie-derechos {
-  border-top: 1px solid rgba(255, 255, 255, 0.15); /* línea fina separadora */
-  margin-top: 30px;            /* espacio antes de la línea */
-  padding-top: 20px;           /* espacio entre la línea y el texto */
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  /* línea fina separadora */
+  margin-top: 30px;
+  /* espacio antes de la línea */
+  padding-top: 20px;
+  /* espacio entre la línea y el texto */
   text-align: center;
   font-size: 13px;
   margin-bottom: 0;
@@ -959,7 +1036,8 @@ body {
 
 /* Enlace al sitio oficial */
 .pie-derechos a {
-  color: #f2b705;              /* dorado */
+  color: #f2b705;
+  /* dorado */
   text-decoration: none;
 }
 
