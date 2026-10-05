@@ -1044,3 +1044,243 @@ body {
 .pie-derechos a:hover {
   text-decoration: underline;
 }
+
+/* ==========================================================
+   MEDIA QUERY 1: TABLET (pantallas de 768px o más)
+   Solo se escribe lo que CAMBIA respecto a la versión celular
+   ========================================================== */
+@media (min-width: 768px) {
+
+  /* ---------- MÁRGENES DE TODAS LAS SECCIONES ---------- */
+  .datos,
+  .programa,
+  .plan-estudio,
+  .docentes,
+  .documentos,
+  .noticias,
+  .contacto,
+  .pie-pagina {
+    padding-left: 32px;
+    /* más espacio a los lados */
+    padding-right: 32px;
+  }
+
+  /* ---------- PORTADA ---------- */
+  .portada {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .portada-contenido {
+    max-width: 640px;
+    /* el texto no se estira de borde a borde */
+  }
+
+  .portada h1 {
+    font-size: 52px;
+    /* título más grande */
+  }
+
+  .portada-texto {
+    font-size: 19px;
+  }
+
+  /* ---------- DATOS: 4 tarjetas en una fila ---------- */
+  .datos-contenido article {
+    flex: 1 1 20%;
+    /* 4 tarjetas de ~25% caben en una fila */
+  }
+
+  /* ---------- PROGRAMA ---------- */
+  .programa-imagen {
+    height: 320px;
+    /* foto más alta */
+  }
+
+  /* ---------- PLAN DE ESTUDIOS ---------- */
+  .tarjeta {
+    max-width: 420px;
+    /* no se estira demasiado */
+    height: 340px;
+    /* un poco más alta: caben más asignaturas */
+  }
+
+  /* ---------- DOCENTES ---------- */
+  .docente-tarjeta {
+    max-width: 420px;
+    /* tarjeta centrada, no estirada */
+  }
+
+  /* ---------- DOCUMENTOS: 3 por fila ---------- */
+  .documentos-lista article {
+    flex: 1 1 30%;
+    /* 3 tarjetas de ~33% caben en una fila */
+  }
+
+  /* ---------- NOTICIAS ---------- */
+  .noticia-imagen {
+    height: 380px;
+    /* afiche más grande */
+  }
+
+  /* ---------- CONTACTO: información y formulario lado a lado ---------- */
+  .contacto-contenido {
+    flex-direction: row;
+    /* CAMBIO: de columna a fila */
+    align-items: flex-start;
+    /* las dos tarjetas empiezan arriba */
+  }
+
+  .contacto-info,
+  .contacto-formulario {
+    flex: 1;
+    /* las dos tarjetas miden lo mismo */
+  }
+
+  /* ---------- PIE DE PÁGINA: 3 columnas lado a lado ---------- */
+  .pie-columnas {
+    flex-direction: row;
+    /* CAMBIO: de columna a fila */
+    justify-content: space-between;
+  }
+
+  .pie-columna {
+    flex: 1;
+    /* las 3 columnas miden lo mismo */
+  }
+}
+
+/* ==========================================================
+   MEDIA QUERY 2: COMPUTADOR (pantallas de 992px o más)
+   Se suma a la de tablet: solo se escribe lo que CAMBIA
+   ========================================================== */
+@media (min-width: 992px) {
+
+  /* ---------- MENÚ COMPLETO ---------- */
+
+  /* Logo a la izquierda y menú a la derecha, en una sola fila */
+  .contenedor {
+    max-width: 1140px;           /* no se estira en pantallas muy anchas */
+    margin: 0 auto;              /* centrado */
+    padding: 0 32px;
+    flex-wrap: nowrap;           /* todo en una sola fila */
+  }
+
+  /* El botón ☰ ya no hace falta */
+  .boton-menu {
+    display: none;
+  }
+
+  /* El menú siempre visible, en fila
+     Se usa el id porque la clase "collapse" de Bootstrap lo esconde,
+     y un id tiene más fuerza que una clase */
+  #menuNavegacion {
+    display: flex;
+    align-items: center;
+    width: auto;                 /* ya no ocupa todo el ancho: solo lo que necesita */
+  }
+
+  /* Enlaces uno al lado del otro */
+  .menu-enlaces {
+    display: flex;
+    margin: 0;
+    gap: 4px;
+  }
+
+  .menu-enlaces a {
+    padding: 8px 8px;
+    font-size: 15px;
+  }
+
+  /* Botón de inscripción separado de los enlaces */
+  .boton-inscripcion {
+    margin-left: 12px;
+  }
+
+  /* ---------- CONTENIDO CENTRADO CON ANCHO MÁXIMO ---------- */
+
+  /* Lo de adentro de cada sección no pasa de 1100px y queda centrado.
+     El fondo de la sección sí sigue ocupando todo el ancho. */
+  .portada-contenido,
+  .datos-contenido,
+  .programa-intro,
+  .programa-contenido,
+  #carruselPlan,
+  #carruselDocentes,
+  .documentos-lista,
+  .carrusel-noticias,
+  .contacto-contenido,
+  .pie-columnas,
+  .pie-derechos {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---------- TÍTULOS DE SECCIÓN MÁS GRANDES ---------- */
+  .datos h2,
+  .programa h2,
+  .plan-estudio h2,
+  .docentes h2,
+  .documentos h2,
+  .noticias h2,
+  .contacto h2 {
+    font-size: 36px;
+  }
+
+  /* ---------- PORTADA ---------- */
+  .portada {
+    justify-content: center;     /* la caja de contenido se centra */
+  }
+
+  .portada-contenido {
+    width: 100%;                 /* ocupa hasta 1100px; el texto queda a la izquierda */
+  }
+
+  .portada h1 {
+    font-size: 64px;
+  }
+
+  .portada-texto {
+    max-width: 600px;            /* la frase no se estira demasiado */
+  }
+
+  /* ---------- PROGRAMA: galería y pestañas lado a lado ---------- */
+  .programa-intro {
+    max-width: 800px;            /* el texto del propósito se lee mejor más angosto */
+  }
+
+  .programa-contenido {
+    display: flex;               /* CAMBIO: galería y pestañas en fila */
+    align-items: center;         /* centradas verticalmente */
+    gap: 32px;
+  }
+
+  .programa-galeria {
+    flex: 1;                     /* mitad del ancho */
+    margin-bottom: 0;            /* ya no hace falta espacio debajo */
+  }
+
+  .programa-pestanas {
+    flex: 1;                     /* la otra mitad */
+  }
+
+  .programa-imagen {
+    height: 380px;
+  }
+
+  /* ---------- PLAN DE ESTUDIOS ---------- */
+  .tarjeta {
+    max-width: 480px;
+    height: 360px;
+  }
+
+  /* ---------- NOTICIAS ---------- */
+  .carrusel-noticias {
+    max-width: 900px;            /* carrusel más angosto que el resto: se ve mejor centrado */
+  }
+
+  .noticia-imagen {
+    height: 450px;
+  }
+}
